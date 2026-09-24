@@ -1004,15 +1004,9 @@ a {
   gap: 20px;
 }
 
-.finta-text-card {
-  min-height: 300px;
-  padding: clamp(28px, 4vw, 56px);
-  gap: clamp(20px, 3vw, 34px);
-}
-
-.finta-text-card ul {
+.finta-done-list {
   display: grid;
-  gap: 14px;
+  gap: 12px;
   margin: 0;
   padding-left: 1.2em;
   line-height: 1.7;
