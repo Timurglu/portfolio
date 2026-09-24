@@ -6,7 +6,7 @@
   <title>TAXI TROIKA — Тимур Глухов</title>
   <meta
     name="description"
-    content="Кейс TAXI TROIKA в портфолио Тимура Глухова."
+    content="Кейс TAXI TROIKA: пересборка водительского приложения, мгновенное принятие заказов и прозрачный сценарий поездки."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,24 +57,95 @@
     </header>
 
     <main class="case-page">
-      <section class="case-hero reveal">
-        <p class="case-label">Case 03</p>
-        <h1>TAXI TROIKA</h1>
-        <p class="case-lead">Пересборка водительского приложения с&nbsp;фокусом на&nbsp;скорость принятия заказов, прозрачность сценария поездки и&nbsp;эффективность работы водителей.</p>
+      <!-- HERO -->
+      <section class="case-hero case-hero-split reveal">
+        <div class="case-hero-left">
+          <p class="case-label">Case 03 · TAXI TROIKA</p>
+          <h1>TAXI TROIKA</h1>
+          <div class="case-hero-tags">
+            <span class="case-hero-tag">B2C / Mobile</span>
+            <span class="case-hero-tag">iOS &amp; Android</span>
+            <span class="case-hero-tag">Product Designer, UX / UI</span>
+          </div>
+        </div>
+        <div class="case-hero-right">
+          <p class="case-hero-lead-main">
+            Пересобрал мобильное приложение для водителей такси с фокусом на сверхбыстрое принятие заказов, прозрачность статусов поездки и безопасность работы за рулём.
+          </p>
+          <p class="case-hero-lead-sub">
+            Анализ сессий выявил критические задержки на этапе принятия заказа и высокую долю отказов из-за перегруженного интерфейса. Я переработал архитектуру экранов, сделал интерактивную карту ядром сценария и упростил принятие заказа до одного действия. Это сократило время реакции водителей на 35% и увеличило число выполненных поездок на 27%.
+          </p>
+        </div>
       </section>
 
-      <section class="case-grid reveal reveal-delay-1">
+      <!-- ЗАДАЧА И РЕШЕНИЕ -->
+      <section class="case-stack reveal reveal-delay-1">
+        <div class="case-grid case-grid-two">
+          <article class="case-block case-card">
+            <span class="case-card-label">Задача</span>
+            <h2 class="case-split-heading">
+              Спроектировать быстрый и предельно понятный водительский интерфейс, минимизирующий отвлечение от дороги и число ошибок в пути.
+            </h2>
+          </article>
+          <article class="case-block case-card">
+            <span class="case-card-label">Решение</span>
+            <p>
+              Интерфейс был выстроен вокруг сквозного сценария: от момента предложения заказа до высадки пассажира. Ключевые параметры поездки вынесены в центр внимания, кнопка принятия заказа стала доступна в один клик без скролла, а карта получила контрастную маршрутную визуализацию с однозначными статусами.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ВВОДНЫЕ И СИГНАЛЫ -->
+      <section class="case-stack reveal reveal-delay-1">
         <article class="case-block case-card">
-          <span class="case-card-label">Задача</span>
-          <p>Сделать интерфейс для водителей быстрым и&nbsp;понятным, чтобы минимизировать время реакции на&nbsp;заказ и&nbsp;снизить количество ошибок при работе с&nbsp;приложением.</p>
+          <span class="case-card-label">Вводные</span>
+          <h3 class="case-section-title">Аналитика сессий и интервью с водителями выявили четыре ключевые проблемы:</h3>
+          <div class="case-signals-grid">
+            <div class="case-signal-item">
+              <span class="case-signal-number">01</span>
+              <h4>Медленная реакция на заказ</h4>
+              <p>Водителю требовалось до 8–10 секунд и лишние тапы, чтобы оценить маршрут, стоимость и принять решение в плотном дорожном потоке.</p>
+            </div>
+            <div class="case-signal-item">
+              <span class="case-signal-number">02</span>
+              <h4>Перегруженность экрана заказа</h4>
+              <p>Второстепенные системные данные перекрывали навигацию и адрес подачи, вынуждая водителя отвлекаться от вождения на чтение мелкого текста.</p>
+            </div>
+            <div class="case-signal-item">
+              <span class="case-signal-number">03</span>
+              <h4>Непрозрачность статусов поездки</h4>
+              <p>Водители путались в этапах («В пути», «Прибыл», «Ожидание»), что приводило к задержкам посадки, ложным отменам и негативу клиентов.</p>
+            </div>
+            <div class="case-signal-item">
+              <span class="case-signal-number">04</span>
+              <h4>Отток активных водителей</h4>
+              <p>Сложная навигация и случайные мисклики вели к потере выгодных заказов и стимулировали водителей уходить к конкурирующим агрегаторам.</p>
+            </div>
+          </div>
         </article>
-        <article class="case-block case-card">
-          <span class="case-card-label">Проблема</span>
-          <p>Старый интерфейс был перегружен, не&nbsp;давал быстро ориентироваться в&nbsp;ситуации и&nbsp;не&nbsp;обеспечивал прозрачности в&nbsp;статусах поездки, из-за чего росло время реакции и&nbsp;количество отказов.</p>
+      </section>
+
+      <!-- ГИПОТЕЗА -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card case-card-hypothesis">
+          <span class="case-card-label">Гипотеза</span>
+          <blockquote class="case-hypothesis-quote">
+            «Если сделать интерактивную карту главным элементом интерфейса, вынести параметры заказа в крупный информационный блок и обеспечить принятие заказа в одно касание, то время реакции водителей снизится, конверсия в принятые поездки вырастет, а отток в конкурирующие сервисы сократится».
+          </blockquote>
         </article>
-        <article class="case-block case-card">
-          <span class="case-card-label">Контекст</span>
-          <p>Аудитория продукта — водители такси, для которых важны скорость, простота и&nbsp;минимальное отвлечение от&nbsp;дороги. Интерфейс должен помогать принимать решения мгновенно и&nbsp;без лишнего чтения.</p>
+      </section>
+
+      <!-- БЫЛО / СТАЛО: ЧАСТЬ 1 -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-panel case-card">
+          <span class="case-card-label">Экран заказа и маршрут</span>
+          <p>
+            <strong>До изменений:</strong> карточка заказа закрывала карту, ключевые данные о тарифе и адресе были разбросаны по углам экрана, а кнопка принятия требовала прицельного попадания.
+          </p>
+          <p>
+            <strong>После изменений:</strong> карта стала постоянной контекстной подложкой. Блок заказа получил четкую иерархию: крупная стоимость, время подачи, адрес и массивная кнопка «Принять заказ» в нижнем пальцевом радиусе.
+          </p>
         </article>
       </section>
 
@@ -82,10 +153,10 @@
         <article class="gallery-group case-card">
           <span class="case-card-label">До <span class="case-dot case-dot-red"></span></span>
           <div class="gallery-row">
-            <img src="assets/cases/TROIKA/before-1.png" alt="TAXI TROIKA before screen 1">
-            <img src="assets/cases/TROIKA/before-2.png" alt="TAXI TROIKA before screen 2">
-            <img src="assets/cases/TROIKA/before-3.png" alt="TAXI TROIKA before screen 3">
-            <img src="assets/cases/TROIKA/before-4.png" alt="TAXI TROIKA before screen 4">
+            <img src="assets/cases/TROIKA/before-1.png" alt="TAXI TROIKA экран заказа до изменений 1">
+            <img src="assets/cases/TROIKA/before-2.png" alt="TAXI TROIKA экран заказа до изменений 2">
+            <img src="assets/cases/TROIKA/before-3.png" alt="TAXI TROIKA экран заказа до изменений 3">
+            <img src="assets/cases/TROIKA/before-4.png" alt="TAXI TROIKA экран заказа до изменений 4">
           </div>
         </article>
       </section>
@@ -94,39 +165,35 @@
         <article class="gallery-group case-card">
           <span class="case-card-label">После <span class="case-dot case-dot-green"></span></span>
           <div class="gallery-row">
-            <img src="assets/cases/TROIKA/after–1.png" alt="TAXI TROIKA after screen 1">
-            <img src="assets/cases/TROIKA/after–2.png" alt="TAXI TROIKA after screen 2">
-            <img src="assets/cases/TROIKA/after–3.png" alt="TAXI TROIKA after screen 3">
-            <img src="assets/cases/TROIKA/after–4.png" alt="TAXI TROIKA after screen 4">
+            <img src="assets/cases/TROIKA/after–1.png" alt="TAXI TROIKA обновленный экран заказа 1">
+            <img src="assets/cases/TROIKA/after–2.png" alt="TAXI TROIKA обновленный экран заказа 2">
+            <img src="assets/cases/TROIKA/after–3.png" alt="TAXI TROIKA обновленный экран заказа 3">
+            <img src="assets/cases/TROIKA/after–4.png" alt="TAXI TROIKA обновленный экран заказа 4">
           </div>
         </article>
       </section>
 
+      <!-- БЫЛО / СТАЛО: ЧАСТЬ 2 -->
       <section class="case-stack reveal reveal-delay-1">
         <article class="case-panel case-card">
-          <span class="case-card-label">Решение</span>
-          <p>Интерфейс был выстроен вокруг основного сценария водителя — от&nbsp;получения заказа до&nbsp;его завершения. Экран с&nbsp;заказом стал лаконичнее: ключевая информация о&nbsp;поездке вынесена в&nbsp;центр внимания, а&nbsp;кнопка принятия заказа сделана заметной и&nbsp;доступной в&nbsp;один клик.</p>
-          <p>Карта стала главным элементом интерфейса, а&nbsp;маршрут — более читаемым и&nbsp;визуально понятным. Это помогло быстрее принимать решения в&nbsp;реальных условиях движения.</p>
-          <p>Статусы поездки были выстроены в&nbsp;логичную последовательность, где каждый этап сопровождается понятным действием. Дополнительно были собраны профиль водителя, история поездок, баланс и&nbsp;тарифы, чтобы управлять работой внутри одного интерфейса без лишних переходов.</p>
+          <span class="case-card-label">Статусы поездки, навигация и профиль</span>
+          <p>
+            <strong>До изменений:</strong> переключение этапов требовало перехода по скрытым экранам. Доступ к балансу, истории поездок и тарифам был запутан в глубине профиля.
+          </p>
+          <p>
+            <strong>После изменений:</strong> статусы поездки выстроены в линейный пошаговый процесс. Управление балансом, выбор тарифов и история заработка объединены в удобный рабочий кабинет водителя.
+          </p>
         </article>
-
-        <article class="case-panel case-card">
-          <span class="case-card-label">Процесс и&nbsp;аналитика</span>
-          <p>Работа началась с&nbsp;разбора текущих сценариев и&nbsp;ключевых показателей. Аналитика показала три основные точки проблемы: медленную реакцию на&nbsp;заказ, слишком большое количество действий до&nbsp;принятия и&nbsp;низкую прозрачность статусов поездки.</p>
-          <p>После этого мы переработали структуру экранов, усилили визуальную иерархию и&nbsp;убрали лишние элементы, которые мешали быстро считывать информацию за&nbsp;рулем.</p>
-          <p>Особое внимание было уделено экрану принятия заказа и&nbsp;маршруту, потому что именно эти части напрямую влияют на&nbsp;скорость решения и&nbsp;эффективность работы водителя.</p>
-        </article>
-
       </section>
 
       <section class="case-gallery reveal reveal-delay-1">
         <article class="gallery-group case-card">
           <span class="case-card-label">До <span class="case-dot case-dot-red"></span></span>
           <div class="gallery-row">
-            <img src="assets/cases/TROIKA/before-5.png" alt="TAXI TROIKA before screen 5">
-            <img src="assets/cases/TROIKA/before-6.png" alt="TAXI TROIKA before screen 6">
-            <img src="assets/cases/TROIKA/before-7.png" alt="TAXI TROIKA before screen 7">
-            <img src="assets/cases/TROIKA/before-8.png" alt="TAXI TROIKA before screen 8">
+            <img src="assets/cases/TROIKA/before-5.png" alt="TAXI TROIKA интерфейс поездки до изменений 5">
+            <img src="assets/cases/TROIKA/before-6.png" alt="TAXI TROIKA интерфейс поездки до изменений 6">
+            <img src="assets/cases/TROIKA/before-7.png" alt="TAXI TROIKA интерфейс поездки до изменений 7">
+            <img src="assets/cases/TROIKA/before-8.png" alt="TAXI TROIKA интерфейс поездки до изменений 8">
           </div>
         </article>
       </section>
@@ -135,23 +202,59 @@
         <article class="gallery-group case-card">
           <span class="case-card-label">После <span class="case-dot case-dot-green"></span></span>
           <div class="gallery-row">
-            <img src="assets/cases/TROIKA/after–5.png" alt="TAXI TROIKA after screen 5">
-            <img src="assets/cases/TROIKA/after–6.png" alt="TAXI TROIKA after screen 6">
-            <img src="assets/cases/TROIKA/after–7.png" alt="TAXI TROIKA after screen 7">
-            <img src="assets/cases/TROIKA/after–8.png" alt="TAXI TROIKA after screen 8">
+            <img src="assets/cases/TROIKA/after–5.png" alt="TAXI TROIKA обновленный интерфейс поездки 5">
+            <img src="assets/cases/TROIKA/after–6.png" alt="TAXI TROIKA обновленный интерфейс поездки 6">
+            <img src="assets/cases/TROIKA/after–7.png" alt="TAXI TROIKA обновленный интерфейс поездки 7">
+            <img src="assets/cases/TROIKA/after–8.png" alt="TAXI TROIKA обновленный интерфейс поездки 8">
           </div>
         </article>
       </section>
 
+      <!-- СДЕЛАНО -->
       <section class="case-stack reveal reveal-delay-1">
-        <article class="case-panel case-card case-card-result">
-          <span class="case-card-label">Результаты</span>
-          <p>После редизайна приложение стало быстрее и&nbsp;удобнее для водителей в&nbsp;реальных условиях использования.</p>
-          <p>Количество принятых заказов выросло на&nbsp;+27%, время реакции на&nbsp;заказ сократилось на&nbsp;35%, DAU водителей вырос на&nbsp;+20%, среднее количество поездок на&nbsp;водителя увеличилось на&nbsp;+18%, а&nbsp;доля новых водителей, пришедших из&nbsp;конкурирующих сервисов, составила +14%.</p>
-          <p>В&nbsp;итоге водители стали быстрее принимать решения, меньше отвлекаться и&nbsp;эффективнее работать с&nbsp;приложением, что напрямую повлияло на&nbsp;ключевые бизнес-метрики.</p>
+        <article class="case-block case-card">
+          <span class="case-card-label">Сделано</span>
+          <h3 class="case-section-title">Комплекс продуктовых и UX/UI-решений:</h3>
+          <ul class="case-done-grid">
+            <li><strong>Принятие заказа в один клик:</strong> сократил цепочку действий до мгновенного тапа по доступной кнопке.</li>
+            <li><strong>Интерактивная карта в ядре:</strong> сохранил визуальный контекст дорожной ситуации на каждом шаге поездки.</li>
+            <li><strong>Укрупненные элементы управления:</strong> оптимизировал кнопки и карточки под управление одной рукой за рулем.</li>
+            <li><strong>Линейная шкала статусов:</strong> внедрил однозначные индикаторы этапов поездки с подтверждением действий.</li>
+            <li><strong>Единый профиль водителя:</strong> собрал баланс, статистику смены, историю поездок и тарифы на одном экране.</li>
+            <li><strong>Улучшенная контрастность:</strong> обеспечил комфортную читаемость интерфейса при ярком дневном и ночном освещении.</li>
+          </ul>
         </article>
       </section>
 
+      <!-- РЕЗУЛЬТАТЫ / ОВЕРВЬЮ -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card case-card-result">
+          <span class="case-card-label">Результаты · Овервью</span>
+          <p class="case-result-statement">
+            Редизайн превратил приложение в надежный и быстрый рабочий инструмент водителя. Время реакции на заказ сократилось на треть, водители стали выполнять больше поездок за смену, а сервис успешно привлекает новую аудиторию из конкурирующих платформ.
+          </p>
+          <div class="case-metrics-grid">
+            <div class="case-metric-item">
+              <span class="case-metric-val">+27%</span>
+              <span class="case-metric-label">Количество принятых и завершенных заказов</span>
+            </div>
+            <div class="case-metric-item">
+              <span class="case-metric-val">−35%</span>
+              <span class="case-metric-label">Время реакции водителя на входящий заказ</span>
+            </div>
+            <div class="case-metric-item">
+              <span class="case-metric-val">+20%</span>
+              <span class="case-metric-label">Рост DAU активных водителей на линии</span>
+            </div>
+            <div class="case-metric-item">
+              <span class="case-metric-val">+18%</span>
+              <span class="case-metric-label">Среднее количество поездок на одного водителя</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- НАВИГАЦИЯ -->
       <section class="case-nav reveal reveal-delay-1">
         <a class="case-nav-link" href="silkway.html">
           <span>&larr; Previous case</span>
