@@ -46,9 +46,7 @@ if ("IntersectionObserver" in window) {
   prototypeVideos.forEach((video) => videoObserver.observe(video));
 }
 
-const fintaGallery = document.querySelector(".finta-gallery");
-
-if (fintaGallery) {
+document.querySelectorAll("[data-finta-gallery]").forEach((fintaGallery) => {
   const slides = Array.from(fintaGallery.querySelectorAll(".finta-slide"));
   const dots = Array.from(fintaGallery.querySelectorAll("[data-gallery-index]"));
   const count = fintaGallery.querySelector(".finta-gallery-count");
@@ -82,4 +80,4 @@ if (fintaGallery) {
   dots.forEach((dot) => {
     dot.addEventListener("click", () => showSlide(Number(dot.dataset.galleryIndex)));
   });
-}
+});
