@@ -295,8 +295,27 @@ a {
 }
 
 .project-card-troika:hover {
-  background: #0072d3;
-  box-shadow: 0 22px 50px rgba(0, 114, 211, 0.22);
+  background: #eaf3ff;
+  color: #12264b;
+  box-shadow: 0 22px 50px rgba(0, 114, 211, 0.16);
+}
+
+.project-card-troika:hover .logo-default {
+  opacity: 1 !important;
+}
+
+.project-card-troika:hover .logo-invert {
+  opacity: 0 !important;
+}
+
+.project-card-finta:hover {
+  background: #e8f0ff;
+  color: #17264b;
+  box-shadow: 0 22px 50px rgba(69, 105, 179, 0.18);
+}
+
+.project-card-finta:hover .logo-default {
+  opacity: 1 !important;
 }
 
 .project-card:hover .project-type,
@@ -320,6 +339,13 @@ a {
   place-items: center;
   min-height: 180px;
   overflow: hidden;
+}
+
+.finta-project-visual img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
 }
 
 .logo-scene {
@@ -370,6 +396,14 @@ a {
 
 .project-card:hover .logo-invert {
   opacity: 1 !important;
+}
+
+.project-card-troika:hover .logo-default {
+  opacity: 1 !important;
+}
+
+.project-card-troika:hover .logo-invert {
+  opacity: 0 !important;
 }
 
 .layer-1 { transform: translateZ(0); opacity: 1; }
@@ -975,5 +1009,237 @@ a {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* FINTA case: editorial copy column with a browsable screen gallery. */
+.finta-case-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.45fr);
+  align-items: start;
+  gap: clamp(28px, 4vw, 64px);
+  padding-top: 0;
+}
+
+.finta-case-copy {
+  display: grid;
+  gap: 26px;
+  align-content: start;
+}
+
+.finta-intro {
+  display: grid;
+  gap: 12px;
+  padding-bottom: 8px;
+}
+
+.finta-intro h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.finta-copy-section {
+  display: grid;
+  gap: 9px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.finta-copy-section p {
+  margin: 0;
+  line-height: 1.65;
+  color: #333;
+}
+
+.finta-outcome {
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: #111;
+}
+
+.finta-outcome .case-card-label,
+.finta-outcome p {
+  color: #fff;
+}
+
+.finta-back-link {
+  width: fit-content;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.finta-gallery {
+  position: sticky;
+  top: 100px;
+  min-width: 0;
+  padding: clamp(14px, 2vw, 28px);
+  background: #e9e8f0;
+  border-radius: 0;
+}
+
+.finta-gallery-frame {
+  display: grid;
+  min-height: min(68vh, 660px);
+  place-items: center;
+}
+
+.finta-slide {
+  display: none;
+  width: 100%;
+  margin: 0;
+}
+
+.finta-slide.is-active {
+  display: block;
+  animation: finta-slide-in 260ms ease both;
+}
+
+.finta-slide img {
+  display: block;
+  width: 100%;
+  max-height: min(68vh, 660px);
+  object-fit: contain;
+  background: #fff;
+}
+
+@keyframes finta-slide-in {
+  from { opacity: 0.55; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.finta-gallery-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+}
+
+.finta-gallery-count {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.finta-gallery-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.finta-gallery-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.finta-gallery-arrow {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.finta-gallery-arrow:hover,
+.finta-gallery-arrow:focus-visible {
+  background: #111;
+  color: #fff;
+}
+
+.finta-gallery-dots {
+  display: flex;
+  gap: 7px;
+  padding-top: 13px;
+}
+
+.finta-gallery-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 99px;
+  background: rgba(17, 17, 17, 0.22);
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.finta-gallery-dots button.is-active {
+  width: 24px;
+  background: #111;
+}
+
+@media (max-width: 900px) {
+  .finta-case-layout {
+    grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
+    gap: 24px;
+  }
+
+  .finta-gallery {
+    top: 92px;
+    padding: 14px;
+  }
+
+  .finta-gallery-frame {
+    min-height: 46vh;
+  }
+
+  .finta-slide img {
+    max-height: 46vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .finta-case-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 0;
+  }
+
+  .finta-case-copy {
+    gap: 20px;
+  }
+
+  .finta-gallery {
+    position: relative;
+    top: auto;
+    grid-row: 1;
+    border-radius: 16px;
+  }
+
+  .finta-gallery-frame {
+    min-height: 38vh;
+  }
+
+  .finta-slide img {
+    max-height: 38vh;
+  }
+}
+
+@media (max-width: 420px) {
+  .finta-gallery-controls {
+    grid-template-columns: auto 1fr;
+    gap: 8px 12px;
+  }
+
+  .finta-gallery-label {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .finta-gallery-count {
+    grid-column: 1;
+  }
+
+  .finta-gallery-buttons {
+    grid-column: 2;
+    justify-self: end;
   }
 }
