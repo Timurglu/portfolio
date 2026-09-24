@@ -997,6 +997,13 @@ a {
 }
 
 /* FINTA before/after carousels follow the case page content flow. */
+.finta-before-after {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.22fr);
+  align-items: start;
+  gap: 20px;
+}
+
 .finta-gallery {
   display: grid;
   justify-items: stretch;
@@ -1102,6 +1109,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  .finta-before-after {
+    grid-template-columns: 1fr;
+  }
+
   .finta-gallery {
     padding: 14px;
   }
