@@ -308,16 +308,6 @@ a {
   opacity: 0 !important;
 }
 
-.project-card-finta:hover {
-  background: #e8f0ff;
-  color: #17264b;
-  box-shadow: 0 22px 50px rgba(69, 105, 179, 0.18);
-}
-
-.project-card-finta:hover .logo-default {
-  opacity: 1 !important;
-}
-
 .project-card:hover .project-type,
 .project-card:hover p:last-child,
 .project-card:hover .case-number {
