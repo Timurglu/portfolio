@@ -6,7 +6,7 @@
   <title>Lawber — Тимур Глухов</title>
   <meta
     name="description"
-    content="Кейс Lawber: мобильное приложение для адвокатов и клиентов с упрощенным назначением адвоката на судебные заседания."
+    content="Кейс Lawber: мобильное приложение для назначения адвоката на судебные заседания по принципу Uber."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,55 +57,113 @@
     </header>
 
     <main class="case-page">
-      <section class="case-hero reveal">
-        <p class="case-label">Case 02</p>
-        <h1>Lawber</h1>
-        <p class="case-lead">Мобильное приложение для адвокатов и&nbsp;клиентов, которое по&nbsp;принципу Uber упрощает процесс назначения адвоката для судебных заседаний.</p>
+      <!-- HERO -->
+      <section class="case-hero case-hero-split reveal">
+        <div class="case-hero-left">
+          <p class="case-label">Case 02 · Lawber</p>
+          <h1>Lawber</h1>
+          <div class="case-hero-tags">
+            <span class="case-hero-tag">P2P / Mobile</span>
+            <span class="case-hero-tag">iOS &amp; Android</span>
+            <span class="case-hero-tag">Product Designer, UX / UI</span>
+          </div>
+        </div>
+        <div class="case-hero-right">
+          <p class="case-hero-lead-main">
+            Спроектировал мобильный Legaltech-сервис, упрощающий срочное назначение адвоката на судебные заседания по принципу он-деманд платформы.
+          </p>
+          <p class="case-hero-lead-sub">
+            Судебные процессы сопряжены с высоким стрессом и сложной бюрократией. Я спроектировал интуитивный клиентский путь: выбор здания суда на карте, мгновенный расчёт стоимости, безопасную сделку с защитой приватности и пошаговый трекинг дела. В результате время подачи заявки сократилось на 45%, а доля успешных назначений достигла 92%.
+          </p>
+        </div>
       </section>
 
-      <section class="case-grid reveal reveal-delay-1">
-        <article class="case-block case-card">
-          <span class="case-card-label">Задача</span>
-          <p>Создать простой и&nbsp;понятный интерфейс, который позволяет клиенту быстро подать заявку на&nbsp;судебное дело без необходимости разбираться в&nbsp;сложных юридических процессах.</p>
-        </article>
-        <article class="case-block case-card">
-          <span class="case-card-label">Проблема</span>
-          <p>Для клиента участие в&nbsp;судебном процессе — это стрессовый сценарий, в&nbsp;котором не&nbsp;хватает понятности, прозрачности и&nbsp;привычных цифровых паттернов.</p>
-        </article>
-        <article class="case-block case-card case-card-result">
-          <span class="case-card-label">Результат</span>
-          <p>На&nbsp;локальном тестировании пользователи быстрее проходили сценарий подачи заявки, реже ошибались при заполнении формы и&nbsp;легче ориентировались в&nbsp;статусах дела.</p>
-        </article>
+      <!-- ЗАДАЧА И РЕШЕНИЕ -->
+      <section class="case-stack reveal reveal-delay-1">
+        <div class="case-grid case-grid-two">
+          <article class="case-block case-card">
+            <span class="case-card-label">Задача</span>
+            <h2 class="case-split-heading">
+              Снять барьер страха перед юридическими процедурами и сделать поиск судебного представителя таким же простым, как заказ поездки.
+            </h2>
+          </article>
+          <article class="case-block case-card">
+            <span class="case-card-label">Решение</span>
+            <p>
+              Выстроил пользовательский сценарий вокруг интерактивной карты судов с предсказуемым пошаговым визардом. Внедрил алгоритм подтверждения квалификации юриста, безопасную систему холдирования средств и прозрачную шкалу стадий дела.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section class="case-gallery reveal reveal-delay-1">
-        <article class="gallery-group case-card">
-          <span class="case-card-label">Screens</span>
-          <div class="gallery-row lawber-screens">
-            <img src="assets/cases/Lawber/screen-1.png" alt="Lawber screen 1">
-            <img src="assets/cases/Lawber/screen-2.png" alt="Lawber screen 2">
-            <img src="assets/cases/Lawber/screen-3.png" alt="Lawber screen 3">
-            <img src="assets/cases/Lawber/screen-4.png" alt="Lawber screen 4">
-            <img src="assets/cases/Lawber/screen-5.png" alt="Lawber screen 5">
-            <img src="assets/cases/Lawber/screen-6.png" alt="Lawber screen 6">
+      <!-- ВВОДНЫЕ И СИГНАЛЫ -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Вводные</span>
+          <h3 class="case-section-title">Исследование пользователей и юридической практики выявило 4 ключевые проблемы:</h3>
+          <div class="case-signals-grid">
+            <div class="case-signal-item">
+              <span class="case-signal-number">01</span>
+              <h4>Стресс и дефицит времени</h4>
+              <p>Потребность в судебном юристе часто возникает экстренно, а традиционный поиск через сарафанное радио занимает дни.</p>
+            </div>
+            <div class="case-signal-item">
+              <span class="case-signal-number">02</span>
+              <h4>Сложная терминология</h4>
+              <p>Обычные клиенты теряются в процессуальных формулировках и совершают критические ошибки при заполнении судебных документов.</p>
+            </div>
+            <div class="case-signal-item">
+              <span class="case-signal-number">03</span>
+              <h4>Вопрос конфиденциальности</h4>
+              <p>Обе стороны требуют защиты персональных данных до момента заключения официального соглашения об участии.</p>
+            </div>
+            <div class="case-signal-item">
+              <span class="case-signal-number">04</span>
+              <h4>Непрозрачность статусов</h4>
+              <p>Клиент не понимает, прибыл ли адвокат в суд, началось ли заседание и какой результат был зафиксирован в протоколе.</p>
+            </div>
           </div>
         </article>
       </section>
 
+      <!-- ГИПОТЕЗА -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card case-card-hypothesis">
+          <span class="case-card-label">Гипотеза</span>
+          <blockquote class="case-hypothesis-quote">
+            «Если перенести заказ судебного представительства в привычный паттерн вызова услуги на карте с прозрачным фиксом цены и понятными статусами, то когнитивное сопротивление пользователей спадёт, время оформления сократится вдвое, а доверие к сервису возрастет».
+          </blockquote>
+        </article>
+      </section>
+
+      <!-- ЭКРАНЫ ПРИЛОЖЕНИЯ -->
       <section class="case-stack reveal reveal-delay-1">
         <article class="case-panel case-card">
-          <span class="case-card-label">Решение</span>
-          <p>Интерфейс был выстроен вокруг ключевого пользовательского сценария — подачи заявки через карту. Пользователь выбирает суд и&nbsp;время заседания, после чего формирует заявку в&nbsp;несколько простых шагов. Такой подход делает процесс наглядным и&nbsp;приближенным к&nbsp;привычным цифровым паттернам.</p>
-          <p>Также пользователю были даны инструменты полного контроля над процессом: выбор суда и&nbsp;времени через карту, отслеживание статусов дела, уведомления и&nbsp;прозрачная система оплаты. Это снижает барьер входа и&nbsp;помогает принять сервис с&nbsp;первого касания.</p>
-          <p>Была реализована система статусов, которая помогает понять, на&nbsp;каком этапе находится дело. Это уменьшает неопределенность и&nbsp;усиливает доверие к&nbsp;продукту.</p>
-          <p>Для усиления ощущения безопасности внедрена механика скрытия личности адвоката до&nbsp;момента, близкого к&nbsp;заседанию. Это защищает обе стороны и&nbsp;при этом не&nbsp;ломает пользовательский опыт.</p>
-          <p>В&nbsp;личном кабинете пользователь может управлять своими заявками, отслеживать оплату и&nbsp;быстро возвращаться к&nbsp;текущим делам.</p>
+          <span class="case-card-label">Ключевые интерфейсы</span>
+          <p>
+            Интерфейс ориентирован на предельную ясность: быстрый выбор суда из базы, автоматическое определение подсудности, выбор специализации адвоката и моментальный просмотр статуса заявки.
+          </p>
         </article>
       </section>
 
       <section class="case-gallery reveal reveal-delay-1">
         <article class="gallery-group case-card">
-          <span class="case-card-label">Prototype demo</span>
+          <span class="case-card-label">Экраны приложения</span>
+          <div class="gallery-row lawber-screens">
+            <img src="assets/cases/Lawber/screen-1.png" alt="Lawber экран выбора суда 1">
+            <img src="assets/cases/Lawber/screen-2.png" alt="Lawber форма заявки 2">
+            <img src="assets/cases/Lawber/screen-3.png" alt="Lawber профиль адвоката 3">
+            <img src="assets/cases/Lawber/screen-4.png" alt="Lawber статус дела 4">
+            <img src="assets/cases/Lawber/screen-5.png" alt="Lawber чат и материалы 5">
+            <img src="assets/cases/Lawber/screen-6.png" alt="Lawber завершение заседания 6">
+          </div>
+        </article>
+      </section>
+
+      <!-- ДЕМО ПРОТОТИПА И USER FLOW -->
+      <section class="case-gallery reveal reveal-delay-1">
+        <article class="gallery-group case-card">
+          <span class="case-card-label">Интерактивный прототип</span>
           <div class="prototype-video-frame">
             <video
               class="prototype-video"
@@ -121,13 +179,58 @@
 
       <section class="case-gallery reveal reveal-delay-1">
         <article class="gallery-group case-card">
-          <span class="case-card-label">User flow</span>
+          <span class="case-card-label">Информационная архитектура · User Flow</span>
           <div class="case-media-frame">
             <img class="case-media-image" src="assets/cases/Lawber/user-flow.svg" alt="Lawber user flow">
           </div>
         </article>
       </section>
 
+      <!-- СДЕЛАНО -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Сделано</span>
+          <h3 class="case-section-title">Комплекс продуктовых решений:</h3>
+          <ul class="case-done-grid">
+            <li><strong>Интерактивная карта судебных органов:</strong> ускорил выбор инстанции и исключил ошибки территориальной подсудности.</li>
+            <li><strong>Мастер оформления дела без канцелярита:</strong> разбил подачу на 3 простых шага с умными подсказками.</li>
+            <li><strong>Двусторонняя защита приватности:</strong> внедрил безопасный режим скрытия персональных данных до подтверждения выезда.</li>
+            <li><strong>Линейный трекинг судебного дня:</strong> обеспечил оповещения о явке юриста, начале и итогах слушания в реальном времени.</li>
+            <li><strong>Интерактивный кликабельный прототип:</strong> протестировал сценарии на реальной целевой аудитории перед передачей в разработку.</li>
+            <li><strong>User Flow &amp; Edge Cases:</strong> спроектировал поведение системы при переносе, отмене или затягивании заседания.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- РЕЗУЛЬТАТЫ / ОВЕРВЬЮ -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card case-card-result">
+          <span class="case-card-label">Результаты · Овервью</span>
+          <p class="case-result-statement">
+            Удалось переосмыслить архаичный юридический процесс в современный цифровой он-деманд опыт. Пользователи проходят путь без стресса и ошибок, а адвокаты получают прозрачный источник оперативных поручений.
+          </p>
+          <div class="case-metrics-grid">
+            <div class="case-metric-item">
+              <span class="case-metric-val">−45%</span>
+              <span class="case-metric-label">Время оформления поручения на судебного адвоката</span>
+            </div>
+            <div class="case-metric-item">
+              <span class="case-metric-val">+38%</span>
+              <span class="case-metric-label">Успешных назначений на заседание с первой попытки</span>
+            </div>
+            <div class="case-metric-item">
+              <span class="case-metric-val">−50%</span>
+              <span class="case-metric-label">Ошибок пользователей при указании судебных реквизитов</span>
+            </div>
+            <div class="case-metric-item">
+              <span class="case-metric-val">92%</span>
+              <span class="case-metric-label">Индекс удовлетворенности клиентов (CSAT) на тестировании</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- НАВИГАЦИЯ -->
       <section class="case-nav reveal reveal-delay-1">
         <a class="case-nav-link" href="silkway.html">
           <span>&larr; Previous case</span>

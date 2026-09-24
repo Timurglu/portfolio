@@ -1150,3 +1150,265 @@ a {
     justify-self: end;
   }
 }
+
+/* Unified Case Study Styles (benchmark style) */
+.case-hero-split,
+.finta-hero {
+  display: grid !important;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+  gap: 32px 48px;
+  align-items: start;
+  justify-items: stretch !important;
+  padding: 28px 24px;
+}
+
+.case-hero-left,
+.finta-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.case-hero-left h1,
+.finta-hero-left h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+}
+
+.case-hero-tags,
+.finta-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.case-hero-tag,
+.finta-hero-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid var(--line-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.case-hero-right,
+.finta-hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.case-hero-lead-main,
+.finta-hero-lead-main {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text);
+  font-weight: 500;
+  max-width: none;
+}
+
+.case-hero-lead-sub,
+.finta-hero-lead-sub {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.68;
+  color: var(--muted);
+  max-width: none;
+}
+
+@media (max-width: 860px) {
+  .case-hero-split,
+  .finta-hero {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+}
+
+.case-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-split-heading {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.case-section-title,
+.finta-section-title {
+  margin: 4px 0 16px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.case-signals-grid,
+.finta-signals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.case-signal-item,
+.finta-signal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--line-soft);
+}
+
+.case-signal-number,
+.finta-signal-number {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.case-signal-item h4,
+.finta-signal-item h4 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.case-signal-item p,
+.finta-signal-item p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.case-card-hypothesis {
+  border-left: 4px solid var(--line);
+}
+
+.case-hypothesis-quote,
+.finta-hypothesis-quote {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.case-done-grid,
+.finta-done-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-done-grid li,
+.finta-done-grid li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.case-done-grid li::before,
+.finta-done-grid li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--line);
+  font-weight: 700;
+}
+
+.case-result-statement {
+  margin: 0 0 24px 0 !important;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.case-metrics-grid,
+.finta-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.case-metric-item,
+.finta-metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.case-metric-val,
+.finta-metric-val {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.case-metric-label,
+.finta-metric-label {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 980px) {
+  .case-signals-grid,
+  .finta-signals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-metrics-grid,
+  .finta-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .case-signals-grid,
+  .finta-signals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-done-grid,
+  .finta-done-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-metrics-grid,
+  .finta-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
