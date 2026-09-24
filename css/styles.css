@@ -295,17 +295,15 @@ a {
 }
 
 .project-card-troika:hover {
-  background: #eaf3ff;
-  color: #12264b;
-  box-shadow: 0 22px 50px rgba(0, 114, 211, 0.16);
+  background: #0072d3;
+  color: #ffffff;
+  box-shadow: 0 22px 50px rgba(0, 114, 211, 0.22);
 }
 
-.project-card-troika:hover .logo-default {
-  opacity: 1 !important;
-}
-
-.project-card-troika:hover .logo-invert {
-  opacity: 0 !important;
+.project-card-finta:hover {
+  background: #006dff;
+  color: #ffffff;
+  box-shadow: 0 22px 50px rgba(0, 109, 255, 0.22);
 }
 
 .project-card:hover .project-type,
@@ -386,14 +384,6 @@ a {
 
 .project-card:hover .logo-invert {
   opacity: 1 !important;
-}
-
-.project-card-troika:hover .logo-default {
-  opacity: 1 !important;
-}
-
-.project-card-troika:hover .logo-invert {
-  opacity: 0 !important;
 }
 
 .layer-1 { transform: translateZ(0); opacity: 1; }
