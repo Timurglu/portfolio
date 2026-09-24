@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINTA — Тимур Глухов</title>
+  <meta name="description" content="Кейс FINTA: баннеры на дашборде и более узнаваемые мини-карты.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">TIMUR GLUHOV</a>
+      <nav class="nav"><a href="index.html#work">Кейсы</a><a href="index.html#contact">Контакты</a></nav>
+    </header>
+    <main class="case-page">
+      <section class="case-hero reveal">
+        <p class="case-label">Case 04 · FINTA · B2C / Fintech</p>
+        <h1>FINTA</h1>
+        <p class="case-lead">Обновление дашборда: место для баннеров и более узнаваемые мини-карты.</p>
+      </section>
+
+      <section class="case-stack reveal reveal-delay-1">
+        <span class="case-card-label">Вводные</span>
+        <div class="case-grid finta-context-grid">
+          <article class="case-block case-card">
+            <span class="case-card-label">Баннеры</span>
+            <p>Информационные и рекламные сообщения занимали много места на дашборде, плохо вписывались в страницу, и пользователи жаловались на них в поддержку. После отмены платы за Decline с 1 мая карточка перестала быть актуальной.</p>
+          </article>
+          <article class="case-block case-card">
+            <span class="case-card-label">Карты</span>
+            <p>Аналитика показала, что пользователи часто быстро переходили между картами, пытаясь найти нужную. Миниатюры было сложно сопоставить с полноразмерными версиями.</p>
+          </article>
+          <article class="case-block case-card">
+            <span class="case-card-label">Задача и гипотеза</span>
+            <p><strong>Задача:</strong> органично встроить баннеры в дашборд и помочь пользователям быстрее различать свои карты.</p>
+            <p><strong>Гипотеза:</strong> компактный слот вместо ненужной карточки Decline впишет сообщения в интерфейс, а мини-карты с теми же обложками, что и полноразмерные, будет легче узнавать.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Метрики по картам</span>
+          <p><strong>Сигнал в аналитике:</strong> пользователи часто быстро переключались между картами в поисках нужной.</p>
+          <p><strong>Метрики для оценки изменения:</strong> число переключений между картами за сессию, доля сессий с повторными переключениями и время от открытия списка до выбора нужной карты.</p>
+        </article>
+      </section>
+
+      <section class="case-stack finta-before-after reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Было</span>
+          <p>Баннер выглядел крупной отдельной вставкой и перетягивал на себя внимание. На дашборде также оставалась карточка Decline, которая больше не была нужна. Мини-карты показывали карту иначе, чем её полноразмерная версия, поэтому пользователю приходилось переключаться, чтобы проверить, ту ли карту он открыл.</p>
+        </article>
+        <section class="case-gallery finta-gallery" aria-label="Дашборд FINTA до изменений" data-finta-gallery>
+          <div class="finta-gallery-frame">
+            <figure class="finta-slide is-active" data-label="До · крупный баннер и Decline">
+              <img src="assets/cases/FINTA/before-1.png" alt="Дашборд FINTA до изменений: крупный баннер и карточка Decline">
+            </figure>
+            <figure class="finta-slide" data-label="Отмена Decline">
+              <img src="assets/cases/FINTA/before-2.png" alt="Дашборд FINTA до изменений с карточкой Decline">
+            </figure>
+          </div>
+          <div class="finta-gallery-controls">
+            <span class="finta-gallery-count" aria-live="polite">01 / 02</span>
+            <span class="finta-gallery-label" aria-live="polite">До · крупный баннер и Decline</span>
+            <div class="finta-gallery-buttons">
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="-1" aria-label="Предыдущее изображение">←</button>
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="1" aria-label="Следующее изображение">→</button>
+            </div>
+          </div>
+          <div class="finta-gallery-dots" aria-label="Выбрать изображение">
+            <button type="button" class="is-active" data-gallery-index="0" aria-label="Изображение 1" aria-current="true"></button>
+            <button type="button" data-gallery-index="1" aria-label="Изображение 2"></button>
+          </div>
+        </section>
+      </section>
+
+      <section class="case-stack finta-before-after reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Стало</span>
+          <p>На месте карточки Decline появился аккуратный блок для баннеров в едином стиле FINTA. Он даёт сообщениям своё место на странице и не выглядит отдельной громоздкой вставкой.</p>
+          <p>Мини-карты стали уменьшенными копиями полноразмерных: сохранили обложки и характерное оформление. Теперь их проще соотнести с нужной картой.</p>
+        </article>
+        <section class="case-gallery finta-gallery" aria-label="Дашборд FINTA после изменений" data-finta-gallery>
+          <div class="finta-gallery-frame">
+            <figure class="finta-slide is-active" data-label="После · мини-карты с обложками">
+              <img src="assets/cases/FINTA/after-1.png" alt="Обновленный дашборд FINTA с баннером и мини-картами с обложками">
+            </figure>
+            <figure class="finta-slide" data-label="После · информационный баннер">
+              <img src="assets/cases/FINTA/after-2.png" alt="Обновленный дашборд FINTA с информационным баннером и мини-картами">
+            </figure>
+          </div>
+          <div class="finta-gallery-controls">
+            <span class="finta-gallery-count" aria-live="polite">01 / 02</span>
+            <span class="finta-gallery-label" aria-live="polite">После · мини-карты с обложками</span>
+            <div class="finta-gallery-buttons">
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="-1" aria-label="Предыдущее изображение">←</button>
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="1" aria-label="Следующее изображение">→</button>
+            </div>
+          </div>
+          <div class="finta-gallery-dots" aria-label="Выбрать изображение">
+            <button type="button" class="is-active" data-gallery-index="0" aria-label="Изображение 1" aria-current="true"></button>
+            <button type="button" data-gallery-index="1" aria-label="Изображение 2"></button>
+          </div>
+        </section>
+      </section>
+
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Сделано</span>
+          <ul class="finta-done-list">
+            <li>Заменил ставшую неактуальной карточку Decline на отдельное место для баннеров.</li>
+            <li>Оформил блок баннеров в визуальном стиле дашборда.</li>
+            <li>Сделал мини-карты похожими на полноразмерные версии за счёт обложек и оформления.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card case-card-result">
+          <span class="case-card-label">Результаты</span>
+          <p>На дашборде появилось предусмотренное место для информационных и рекламных сообщений. Устаревшая карточка уступила место новому блоку, а мини-карты теперь помогают узнавать нужную карту по её обложке.</p>
+        </article>
+      </section>
+
+      <section class="case-nav reveal reveal-delay-1">
+        <a class="case-nav-link" href="case-03.html">
+          <span>&larr; Previous case</span>
+          <div class="case-nav-title">
+            <span class="case-nav-logo-wrap" aria-hidden="true">
+              <img class="case-nav-logo case-nav-logo-default" src="assets/images/troika-logo.svg" alt="">
+              <img class="case-nav-logo case-nav-logo-hover" src="assets/images/troika-logo-invert.svg" alt="">
+            </span>
+            <strong>TAXI TROIKA</strong>
+          </div>
+        </a>
+        <a class="case-nav-link" href="silkway.html">
+          <span>Next case &rarr;</span>
+          <div class="case-nav-title">
+            <span class="case-nav-logo-wrap" aria-hidden="true">
+              <img class="case-nav-logo case-nav-logo-default" src="assets/images/silkway-logo.svg" alt="">
+              <img class="case-nav-logo case-nav-logo-hover" src="assets/images/silkway-logo-invert.svg" alt="">
+            </span>
+            <strong>Silkway</strong>
+          </div>
+        </a>
+      </section>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
