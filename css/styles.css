@@ -27,6 +27,10 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
+p, h1, h2, h3, h4, h5, h6, li, blockquote, .case-metric-label, .case-result-statement {
+  text-wrap: pretty;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -1154,11 +1158,7 @@ a {
 /* Unified Case Study Styles (benchmark style) */
 .case-hero-split,
 .finta-hero {
-  display: grid !important;
-  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
-  gap: 32px 48px;
-  align-items: start;
-  justify-items: stretch !important;
+  display: block !important;
   padding: 28px 24px;
 }
 
@@ -1226,8 +1226,7 @@ a {
 }
 
 @media (max-width: 860px) {
-  .case-hero-split,
-  .finta-hero {
+  .case-hero-split {
     grid-template-columns: 1fr !important;
     gap: 20px;
   }
@@ -1350,8 +1349,8 @@ a {
 .case-metrics-grid,
 .finta-metrics-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
   width: 100%;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -1367,10 +1366,10 @@ a {
 .case-metric-val,
 .finta-metric-val {
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
   font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.04em;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   color: #ffffff;
 }
 
@@ -1389,8 +1388,8 @@ a {
 
   .case-metrics-grid,
   .finta-metrics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
   }
 }
 
@@ -1411,4 +1410,5 @@ a {
     gap: 18px;
   }
 }
+
 
