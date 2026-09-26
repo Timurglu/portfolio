@@ -17,6 +17,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 96px;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,10 +26,44 @@ body {
   color: var(--text);
   background: var(--bg);
   font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
 }
 
-p, h1, h2, h3, h4, h5, h6, li, blockquote, .case-metric-label, .case-result-statement {
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+blockquote,
+.case-metric-label,
+.case-result-statement,
+.case-split-heading,
+.case-section-title,
+.finta-section-title {
   text-wrap: pretty;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.case-block,
+.case-card,
+.case-signal-item,
+.finta-signal-item,
+.case-metric-item,
+.finta-metric-item,
+.compare-card,
+.finta-gallery {
+  min-width: 0;
+  max-width: 100%;
 }
 
 body::before {
@@ -612,6 +647,10 @@ a {
   gap: 20px;
 }
 
+.case-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .case-stack {
   display: grid;
   gap: 20px;
@@ -638,6 +677,7 @@ a {
 
 .case-block {
   min-height: 210px;
+  min-width: 0;
 }
 
 .case-card {
@@ -646,6 +686,7 @@ a {
   padding: 20px;
   align-content: start;
   justify-items: start;
+  min-width: 0;
 }
 
 .case-nav-link {
@@ -780,6 +821,7 @@ a {
 
 .lawber-screens img {
   width: 190px;
+  max-width: 100%;
   height: auto;
   justify-self: center;
   align-self: start;
@@ -910,8 +952,13 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .case-grid {
+  .case-grid,
+  .case-grid-two {
     grid-template-columns: 1fr;
+  }
+
+  .case-block {
+    min-height: auto;
   }
 
   .case-compare {
@@ -1230,10 +1277,33 @@ a {
     grid-template-columns: 1fr !important;
     gap: 20px;
   }
-}
 
-.case-grid-two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  .case-grid,
+  .case-grid-two {
+    grid-template-columns: 1fr !important;
+  }
+
+  .case-block {
+    min-height: auto;
+  }
+
+  .finta-before-after {
+    grid-template-columns: 1fr !important;
+  }
+
+  .case-compare {
+    grid-template-columns: 1fr !important;
+  }
+
+  .compare-card {
+    width: 100% !important;
+    justify-self: stretch !important;
+  }
+
+  .compare-card img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .case-split-heading {
@@ -1393,21 +1463,90 @@ a {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .case-signals-grid,
   .finta-signals-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .case-done-grid,
   .finta-done-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .case-metrics-grid,
   .finta-metrics-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 18px;
+  }
+
+  .gallery-row-two {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lawber-screens {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .case-hero-heading,
+  .finta-hero-heading {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    line-height: 1;
+  }
+
+  .case-split-heading {
+    font-size: clamp(1.15rem, 4.5vw, 1.45rem);
+    line-height: 1.35;
+  }
+
+  .case-section-title,
+  .finta-section-title {
+    font-size: clamp(1.1rem, 4vw, 1.25rem);
+    line-height: 1.35;
+  }
+
+  .case-result-statement {
+    font-size: clamp(1.05rem, 4vw, 1.35rem);
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lawber-screens {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lawber-screens img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-shell {
+    width: calc(100% - 16px);
+  }
+
+  .topbar,
+  .hero-grid,
+  .project-card,
+  .contact-layout,
+  .contact-item,
+  .case-hero,
+  .case-card,
+  .finta-gallery {
+    padding: 14px !important;
+  }
+
+  .case-signal-item,
+  .finta-signal-item {
+    padding: 12px;
   }
 }
 
