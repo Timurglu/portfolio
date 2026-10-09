@@ -1,8 +1,19 @@
+---
+permalink: /
+---
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="{{ site.baseurl }}/">
+  <script>
+    if (window.location.pathname.endsWith('/index.html')) {
+      window.location.replace(
+        window.location.pathname.replace(/index\.html$/, '') + window.location.search + window.location.hash
+      );
+    }
+  </script>
   <title>Тимур Глухов&nbsp;— Product Designer</title>
   <meta
     name="description"
@@ -83,7 +94,7 @@
         </div>
 
         <div class="projects">
-          <a class="project-card project-card-finta reveal" href="case-04.html">
+          <a class="project-card project-card-finta reveal" href="finta/">
             <span class="case-number">01</span>
             <div class="project-visual" aria-hidden="true">
               <div class="logo-scene">
@@ -107,7 +118,7 @@
               <p>Заменил неактуальную карточку Decline на&nbsp;нативный промо-слот и&nbsp;синхронизировал превью карт с&nbsp;обложками: убрал путаницу со&nbsp;счетами и&nbsp;жалобы на&nbsp;баннеры.</p>
             </div>
           </a>
-          <a class="project-card project-card-silkway reveal" href="silkway.html">
+          <a class="project-card project-card-silkway reveal" href="silkway/">
             <span class="case-number">02</span>
             <div class="project-visual" aria-hidden="true">
               <div class="logo-scene">
@@ -135,7 +146,7 @@
             </div>
           </a>
 
-          <a class="project-card project-card-lawber reveal reveal-delay-1" href="case-02.html" hidden>
+          <a class="project-card project-card-lawber reveal reveal-delay-1" href="lawber/" hidden>
             <span class="case-number">03</span>
             <div class="project-visual" aria-hidden="true">
               <div class="logo-scene">
@@ -164,7 +175,7 @@
             </div>
           </a>
 
-          <a class="project-card project-card-troika reveal reveal-delay-2" href="case-03.html">
+          <a class="project-card project-card-troika reveal reveal-delay-2" href="taxi-troika/">
             <span class="case-number">03</span>
             <div class="project-visual" aria-hidden="true">
               <div class="logo-scene">
