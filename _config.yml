@@ -1,1 +1,5 @@
 baseurl: "/portfolio"
+plugins:
+  - jekyll-redirect-from
+redirect_from:
+  json: false
