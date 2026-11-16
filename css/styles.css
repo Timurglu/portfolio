@@ -355,6 +355,12 @@ a {
   box-shadow: 0 22px 50px rgba(33, 108, 255, 0.22);
 }
 
+.project-card-sber:hover {
+  background: #20aa4d;
+  color: #ffffff;
+  box-shadow: 0 22px 50px rgba(32, 170, 77, 0.22);
+}
+
 .project-card:hover .project-type,
 .project-card:hover p:last-child,
 .project-card:hover .case-number {
