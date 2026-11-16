@@ -304,16 +304,16 @@ a {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
 }
 
 .project-card {
   display: grid;
   grid-template-rows: auto auto 1fr;
-  gap: 20px;
-  min-height: 520px;
-  padding: 24px;
+  gap: 18px;
+  min-height: 500px;
+  padding: 24px 20px;
   transition:
     background-color 520ms cubic-bezier(0.22, 1, 0.36, 1),
     color 520ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -461,15 +461,16 @@ a {
 
 .project-card h3 {
   margin: 0;
-  font-size: 1.65rem;
-  line-height: 1.1;
+  font-size: clamp(1.25rem, 1.35vw, 1.45rem);
+  line-height: 1.15;
   letter-spacing: -0.04em;
 }
 
 .project-card p:last-child {
   margin: 0;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.6;
+  font-size: 0.94rem;
 }
 
 .contact-layout {
@@ -960,6 +961,10 @@ a {
   transition-delay: 240ms;
 }
 
+.reveal-delay-3 {
+  transition-delay: 360ms;
+}
+
 .reveal-visible {
   opacity: 1;
   transform: translateY(0);
@@ -1000,7 +1005,8 @@ a {
   }
 
   .projects {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
   .mentions-grid {
@@ -1039,6 +1045,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
   .site-shell {
     width: min(calc(100% - 24px), var(--container));
     padding-bottom: 64px;
@@ -1101,7 +1111,8 @@ a {
 
   .reveal,
   .reveal-delay-1,
-  .reveal-delay-2 {
+  .reveal-delay-2,
+  .reveal-delay-3 {
     opacity: 1;
     transform: none;
     transition: none;
