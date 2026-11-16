@@ -1,0 +1,417 @@
+---
+permalink: /antiplagiat/
+redirect_from:
+  - /antiplagiat.html
+---
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="{{ site.baseurl }}/">
+  <title>Антиплагиат&nbsp;— Тимур Глухов</title>
+  <meta name="description" content="Кейс Антиплагиат: проектирование AI-ассистента на странице результатов проверки, JTBD, zero-prompt подсказки и дизайн-система.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <script type="text/javascript">
+    (function(m, e, t, r, i, k, a) {
+      m[i] = m[i] || function() {
+        (m[i].a = m[i].a || []).push(arguments);
+      };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) {
+          return;
+        }
+      }
+      k = e.createElement(t);
+      a = e.getElementsByTagName(t)[0];
+      k.async = 1;
+      k.src = r;
+      a.parentNode.insertBefore(k, a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=108725720", "ym");
+
+    ym(108725720, "init", {
+      ssr: true,
+      webvisor: true,
+      clickmap: true,
+      ecommerce: "dataLayer",
+      referrer: document.referrer,
+      url: location.href,
+      accurateTrackBounce: true,
+      trackLinks: true
+    });
+  </script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108725720" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="">TIMUR GLUHOV</a>
+      <nav class="nav"><a href="#work">Кейсы</a><a href="#contact">Контакты</a></nav>
+    </header>
+    <main class="case-page">
+      <!-- HERO -->
+      <section class="case-hero finta-hero reveal">
+        <div class="finta-hero-left">
+          <p class="case-label">Case 01 · Антиплагиат</p>
+          <h1>Антиплагиат</h1>
+          <div class="finta-hero-tags">
+            <span class="finta-hero-tag">B2B &amp; B2C / EdTech</span>
+            <span class="finta-hero-tag">Web &amp; Mobile</span>
+            <span class="finta-hero-tag">AI Assistant &amp; UX Research</span>
+            <span class="finta-hero-tag">Middle Product Designer</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ЗАДАЧА И РЕШЕНИЕ -->
+      <section class="case-stack reveal reveal-delay-1">
+        <div class="case-grid case-grid-two">
+          <article class="case-block case-card">
+            <span class="case-card-label">Задача</span>
+            <h2 class="case-split-heading">
+              Встроить AI-ассистента в&nbsp;страницу результатов проверки, перевести абстрактные проценты («Оригинальность 46.53%», «ИИ-генерация») в&nbsp;ясный план действий и&nbsp;снизить отток пользователей.
+            </h2>
+          </article>
+          <article class="case-block case-card">
+            <span class="case-card-label">Решение</span>
+            <p>
+              Спроектировал контекстного AI-ассистента прямо на&nbsp;дашборде отчёта: добавил понятный человеческий статус-вердикт, zero-prompt карточки-подсказки («Где найден ИИ?», «Советы по&nbsp;рерайту»), локализацию машинных фрагментов по&nbsp;главам и&nbsp;интерактивный переход к&nbsp;нужному месту документа в&nbsp;1&nbsp;клик.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ВВОДНЫЕ И ПРОБЛЕМАТИКА -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Контекст и проблематика</span>
+          <h3 class="finta-section-title">После проверки пользователь видит цифры отчёта, но&nbsp;остаётся один на&nbsp;один с&nbsp;вопросом «Что делать дальше?»:</h3>
+          <div class="finta-signals-grid">
+            <div class="finta-signal-item">
+              <span class="finta-signal-number">01</span>
+              <h4>Растерянность от цифр</h4>
+              <p>Показатели «Оригинальность 46.53% ниже порога 70%» и&nbsp;«Присутствует ИИ-генерация» пугают пользователей, но&nbsp;не&nbsp;дают ответа, какие конкретно абзацы признаны сгенерированными.</p>
+            </div>
+            <div class="finta-signal-item">
+              <span class="finta-signal-number">02</span>
+              <h4>Ступор перед пустым инпутом</h4>
+              <p>Обычное поле ввода чата вызывает барьер чистого листа: люди не&nbsp;знают, как&nbsp;сформулировать вопрос нейросети и&nbsp;какие данные она способна предоставить по&nbsp;тексту.</p>
+            </div>
+            <div class="finta-signal-item">
+              <span class="finta-signal-number">03</span>
+              <h4>Высокий Drop-off</h4>
+              <p>Пользователи закрывали сервис сразу после беглого взгляда на&nbsp;проценты, так и&nbsp;не&nbsp;перейдя к&nbsp;глубокому изучению отчёта и&nbsp;не&nbsp;совершая целевых действий.</p>
+            </div>
+            <div class="finta-signal-item">
+              <span class="finta-signal-number">04</span>
+              <h4>Разные цели аудитории</h4>
+              <p>Студентам важно уложиться в&nbsp;норматив кафедры, преподавателям&nbsp;— пресечь фальсификацию (микрошрифт, скрытые символы), а&nbsp;авторам&nbsp;— избавиться от&nbsp;машинного тона статьи.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- JTBD / ИССЛЕДОВАНИЕ АУДИТОРИИ -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">JTBD · Исследование аудитории</span>
+          <h3 class="finta-section-title">Три ключевых сегмента пользователей и&nbsp;их реальные задачи:</h3>
+          <div class="finta-signals-grid">
+            <div class="finta-signal-item">
+              <span class="finta-signal-number">Студенты</span>
+              <h4>Студенты и магистранты</h4>
+              <p>Когда работа не&nbsp;проходит норматив, я&nbsp;хочу увидеть, какие конкретно главы признаны ИИ и&nbsp;получить понятные советы по&nbsp;рерайту, чтобы вовремя защитить работу без&nbsp;риска дисквалификации.</p>
+            </div>
+            <div class="finta-signal-item">
+              <span class="finta-signal-number">Преподаватели</span>
+              <h4>Преподаватели и рецензенты</h4>
+              <p>Когда студент показывает пограничный результат, я&nbsp;хочу быстро отделить корректные цитаты от&nbsp;плагиата и&nbsp;сразу узнать о&nbsp;попытках обхода системы (замена символов, микрошрифт, маскировка).</p>
+            </div>
+            <div class="finta-signal-item">
+              <span class="finta-signal-number">Авторы / SEO</span>
+              <h4>Авторы, редакторы и копирайтеры</h4>
+              <p>Когда я&nbsp;сдаю коммерческий лонгрид, я&nbsp;хочу локализовать машинные обороты по&nbsp;разделам и&nbsp;отделить внешние совпадения от&nbsp;самоцитирования, чтобы статья успешно ранжировалась в&nbsp;поиске.</p>
+            </div>
+            <div class="finta-signal-item">
+              <span class="finta-signal-number">Бенчмарки</span>
+              <h4>Конкурентный анализ</h4>
+              <p>Изучил практики рынка: ТЕКСТ.РУ (версионность и&nbsp;история правок), Paperpal (zero-prompt старт без&nbsp;ввода текста), GPTzero (вердикт на&nbsp;человеческом языке и&nbsp;топ подозрительных фраз).</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ГИПОТЕЗЫ -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card case-card-hypothesis">
+          <span class="case-card-label">Продуктовые гипотезы</span>
+          <div style="display: grid; gap: 16px;">
+            <blockquote class="finta-hypothesis-quote">
+              <strong>1. Человеческий вердикт:</strong> «Если сразу при&nbsp;открытии покажем в&nbsp;чате понятный вердикт („работа в норме“ или „требуется доработка“), то снимем первую тревогу пользователя, потому что переведём абстрактные проценты в&nbsp;ясный статус».
+            </blockquote>
+            <blockquote class="finta-hypothesis-quote">
+              <strong>2. Zero-prompt подсказки:</strong> «Если добавим готовые карточки-саджесты („Где найден ИИ?“, „Советы по рерайту“, „Объяснить маркеры ИИ“), то вовлечём пользователя в&nbsp;диалог в&nbsp;1&nbsp;клик и&nbsp;уберём ступор перед&nbsp;пустым полем ввода».
+            </blockquote>
+            <blockquote class="finta-hypothesis-quote">
+              <strong>3. Локализация риска:</strong> «Если ассистент будет подсвечивать конкретные главы документа с&nbsp;максимальным риском (например, „Раздел 1.2 — 80% машинного тона“), пользователь перестанет смотреть на&nbsp;общие графики и&nbsp;пойдёт исправлять конкретный текст».
+            </blockquote>
+            <blockquote class="finta-hypothesis-quote">
+              <strong>4. Прямой переход к&nbsp;тексту:</strong> «Если сделаем в&nbsp;теле ответа интерактивную кнопку перехода к&nbsp;нужной главе („Посмотреть Раздел 1.2“), путь до&nbsp;правки сократится до&nbsp;одного клика без&nbsp;ручного листания всего документа».
+            </blockquote>
+          </div>
+        </article>
+      </section>
+
+      <!-- БЫЛО / СТАЛО -->
+      <section class="case-stack finta-before-after reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Было <span class="case-dot case-dot-red"></span></span>
+          <div style="display: grid; gap: 14px;">
+            <p>
+              <strong>Одиночество пользователя перед графиками:</strong> Экран выдавал набор процентов («Оригинальность 46.53%», «ИИ-генерация»), но&nbsp;не&nbsp;давал никакой интерпретации. Пользователь не&nbsp;понимал, много это или мало для&nbsp;его норматива.
+            </p>
+            <p>
+              <strong>Отсутствие инструмента работы с ошибками:</strong> Сервис констатировал факт проблемы («Присутствует ИИ-генерация!»), но&nbsp;не&nbsp;объяснял, почему алгоритм счёл текст машинным и&nbsp;в&nbsp;каких разделах сконцентрирована проблема.
+            </p>
+            <p>
+              <strong>Высокий барьер для правок:</strong> Чтобы найти подозрительное место, приходилось вручную просматривать десятки страниц текста, не&nbsp;понимая приоритетов исправления.
+            </p>
+          </div>
+        </article>
+        <section class="case-gallery finta-gallery" aria-label="Дашборд Антиплагиат до изменений" data-finta-gallery>
+          <div class="finta-gallery-frame">
+            <figure class="finta-slide is-active" data-label="До · отчёт с сухими цифрами без подсказок и ассистента">
+              <img src="assets/cases/antiplagiat/before-results-report.png" alt="Исходный экран результатов проверки Антиплагиат без AI-ассистента">
+            </figure>
+          </div>
+          <div class="finta-gallery-controls">
+            <span class="finta-gallery-count" aria-live="polite">01 / 01</span>
+            <span class="finta-gallery-label" aria-live="polite">До&nbsp;· отчёт с&nbsp;сухими цифрами без&nbsp;подсказок и&nbsp;ассистента</span>
+            <div class="finta-gallery-buttons">
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="-1" aria-label="Предыдущее изображение" disabled>←</button>
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="1" aria-label="Следующее изображение" disabled>→</button>
+            </div>
+          </div>
+          <div class="finta-gallery-dots" aria-label="Выбрать изображение">
+            <button type="button" class="is-active" data-gallery-index="0" aria-label="Изображение 1" aria-current="true"></button>
+          </div>
+        </section>
+      </section>
+
+      <!-- СТАЛО: ОСНОВНОЙ СЦЕНАРИЙ (WEB 1920x1080) -->
+      <section class="case-stack finta-before-after reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Стало · Сценарий ассистента (Web 1920×1080) <span class="case-dot case-dot-green"></span></span>
+          <div style="display: grid; gap: 14px;">
+            <p>
+              <strong>Человеческий статус и саджесты:</strong> Ассистент сразу показывает понятный статус («Требуется доработка: оригинальность 46.53% ниже порога 70%») и&nbsp;три zero-prompt кнопки: «Соответствие нормам порога», «Советы по&nbsp;рерайту», «Объяснить маркеры ИИ».
+            </p>
+            <p>
+              <strong>Стилистический разбор аномалий:</strong> В&nbsp;ответе ассистент анализирует смену тона текста (на&nbsp;примере описания Drupal: резкий переход от&nbsp;разговорных фраз к&nbsp;академическим дублям) и&nbsp;даёт чёткую рекомендацию, как&nbsp;сократить фрагмент.
+            </p>
+            <p>
+              <strong>Переход в отчёт в 1 клик:</strong> В&nbsp;конце ответа встроена кнопка «Посмотреть Раздел 1.2», которая переносит пользователя ровно к&nbsp;проблемному абзацу в&nbsp;структуре документа.
+            </p>
+            <p>
+              <strong>Удобное сворачивание:</strong> Если пользователь хочет сосредоточиться на&nbsp;чтении документа, ассистент плавно закрывается в&nbsp;минималистичную кнопку вызова в&nbsp;углу экрана.
+            </p>
+          </div>
+        </article>
+        <section class="case-gallery finta-gallery" aria-label="Сценарий работы ассистента Web" data-finta-gallery>
+          <div class="finta-gallery-frame">
+            <figure class="finta-slide is-active" data-label="01 · Стандартное состояние: вердикт и zero-prompt саджесты">
+              <img src="assets/cases/antiplagiat/web-02-assistant-open.png" alt="Дашборд Антиплагиат с открытым AI-ассистентом и карточками подсказок">
+            </figure>
+            <figure class="finta-slide" data-label="02 · Ввод вопроса: активный фокус и голосовой ввод">
+              <img src="assets/cases/antiplagiat/web-03-input-focus.png" alt="Поле ввода вопроса с подсказкой и возможностью голосового запроса">
+            </figure>
+            <figure class="finta-slide" data-label="03 · Процесс обработки: AI анализирует структуру документа">
+              <img src="assets/cases/antiplagiat/web-04-processing.png" alt="Состояние ожидания ответа: индикация обработки запроса">
+            </figure>
+            <figure class="finta-slide" data-label="04 · Ответ ассистента: глубокий стилистический анализ текста">
+              <img src="assets/cases/antiplagiat/web-05-response-analysis.png" alt="Ответ ассистента с разбором машинных фраз и дублирования">
+            </figure>
+            <figure class="finta-slide" data-label="05 · CTA перехода: кнопка «Посмотреть Раздел 1.2»">
+              <img src="assets/cases/antiplagiat/web-06-cta-report.png" alt="Кнопка быстрого перехода к проблемному разделу в отчете">
+            </figure>
+            <figure class="finta-slide" data-label="06 · Ассистент закрыт: чистый экран отчёта со свернутой кнопкой">
+              <img src="assets/cases/antiplagiat/web-07-assistant-closed.png" alt="Чистый дашборд отчёта с возможностью вызвать ассистента в любой момент">
+            </figure>
+          </div>
+          <div class="finta-gallery-controls">
+            <span class="finta-gallery-count" aria-live="polite">01 / 06</span>
+            <span class="finta-gallery-label" aria-live="polite">01&nbsp;· Стандартное состояние: вердикт и&nbsp;zero-prompt саджесты</span>
+            <div class="finta-gallery-buttons">
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="-1" aria-label="Предыдущее изображение">←</button>
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="1" aria-label="Следующее изображение">→</button>
+            </div>
+          </div>
+          <div class="finta-gallery-dots" aria-label="Выбрать изображение">
+            <button type="button" class="is-active" data-gallery-index="0" aria-label="Изображение 1" aria-current="true"></button>
+            <button type="button" data-gallery-index="1" aria-label="Изображение 2"></button>
+            <button type="button" data-gallery-index="2" aria-label="Изображение 3"></button>
+            <button type="button" data-gallery-index="3" aria-label="Изображение 4"></button>
+            <button type="button" data-gallery-index="4" aria-label="Изображение 5"></button>
+            <button type="button" data-gallery-index="5" aria-label="Изображение 6"></button>
+          </div>
+        </section>
+      </section>
+
+      <!-- АДАПТИВНЫЕ РЕШЕНИЯ (TABLET И MOBILE) -->
+      <section class="case-stack finta-before-after reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Адаптивность · Tablet &amp; Mobile</span>
+          <div style="display: grid; gap: 14px;">
+            <p>
+              <strong>Планшетный интерфейс (1133×744):</strong> Ассистент открывается в&nbsp;виде аккуратной сплит-панели, которая не&nbsp;перекрывает левую навигацию по&nbsp;документам и&nbsp;сохраняет контекст чтения отчёта.
+            </p>
+            <p>
+              <strong>Мобильный опыт (375×840):</strong> Ассистент спроектирован в&nbsp;формате выдвижного Bottom Sheet, до&nbsp;которого удобно дотягиваться большим пальцем одной руки. Саджесты скроллятся горизонтально, а&nbsp;поле ввода всегда зафиксировано над&nbsp;клавиатурой.
+            </p>
+          </div>
+        </article>
+        <section class="case-gallery finta-gallery" aria-label="Адаптивные экраны Tablet и Mobile" data-finta-gallery>
+          <div class="finta-gallery-frame">
+            <figure class="finta-slide is-active" data-label="Tablet · сплит-панель ассистента без потери контекста">
+              <img src="assets/cases/antiplagiat/adaptive-tablet.png" alt="Планшетная версия интерфейса Антиплагиат с ассистентом">
+            </figure>
+            <figure class="finta-slide" data-label="Mobile · дашборд результатов на смартфоне">
+              <img src="assets/cases/antiplagiat/adaptive-mobile-dashboard.png" alt="Мобильный дашборд результатов проверки">
+            </figure>
+            <figure class="finta-slide" data-label="Mobile · выдвижной Bottom Sheet ассистента">
+              <img src="assets/cases/antiplagiat/adaptive-mobile-assistant.png" alt="Мобильный выдвижной Bottom Sheet AI-ассистента">
+            </figure>
+            <figure class="finta-slide" data-label="Mobile · ответ ассистента и саджесты на мобильном">
+              <img src="assets/cases/antiplagiat/adaptive-mobile-response.png" alt="Экран ответа ассистента в мобильном интерфейсе">
+            </figure>
+          </div>
+          <div class="finta-gallery-controls">
+            <span class="finta-gallery-count" aria-live="polite">01 / 04</span>
+            <span class="finta-gallery-label" aria-live="polite">Tablet&nbsp;· сплит-панель ассистента без&nbsp;потери контекста</span>
+            <div class="finta-gallery-buttons">
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="-1" aria-label="Предыдущее изображение">←</button>
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="1" aria-label="Следующее изображение">→</button>
+            </div>
+          </div>
+          <div class="finta-gallery-dots" aria-label="Выбрать изображение">
+            <button type="button" class="is-active" data-gallery-index="0" aria-label="Изображение 1" aria-current="true"></button>
+            <button type="button" data-gallery-index="1" aria-label="Изображение 2"></button>
+            <button type="button" data-gallery-index="2" aria-label="Изображение 3"></button>
+            <button type="button" data-gallery-index="3" aria-label="Изображение 4"></button>
+          </div>
+        </section>
+      </section>
+
+      <!-- ДИЗАЙН-СИСТЕМА И КОМПОНЕНТЫ -->
+      <section class="case-stack finta-before-after reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Дизайн-система · Local UI Kit</span>
+          <div style="display: grid; gap: 14px;">
+            <p>
+              <strong>14 состояний поля ввода ассистента:</strong> Спроектировал интерактивный компонент инпута с&nbsp;поддержкой текстового и&nbsp;голосового ввода, состояний наведения, фокуса, заполненности, анимации размышления нейросети, обработки ошибок и&nbsp;блокировки.
+            </p>
+            <p>
+              <strong>Модульная библиотека компонентов:</strong> Собрал токены типографики, фирменной палитры (синий #216cff, фиолетовый AI-акцент, статусная индикация), карточки метрик, статусные бейджи, кнопки действий и&nbsp;мобильные табы.
+            </p>
+          </div>
+        </article>
+        <section class="case-gallery finta-gallery" aria-label="Дизайн-система и библиотека компонентов" data-finta-gallery>
+          <div class="finta-gallery-frame">
+            <figure class="finta-slide is-active" data-label="UI Kit · 14 состояний поля ввода ассистента">
+              <img src="assets/cases/antiplagiat/ui-kit-input-states.png" alt="Компонентная матрица 14 состояний поля ввода ассистента">
+            </figure>
+            <figure class="finta-slide" data-label="Design System · фундаментальные токены и компоненты">
+              <img src="assets/cases/antiplagiat/ui-kit-components.png" alt="Локальная дизайн-система Антиплагиат">
+            </figure>
+          </div>
+          <div class="finta-gallery-controls">
+            <span class="finta-gallery-count" aria-live="polite">01 / 02</span>
+            <span class="finta-gallery-label" aria-live="polite">UI Kit&nbsp;· 14 состояний поля ввода ассистента</span>
+            <div class="finta-gallery-buttons">
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="-1" aria-label="Предыдущее изображение">←</button>
+              <button type="button" class="finta-gallery-arrow" data-gallery-step="1" aria-label="Следующее изображение">→</button>
+            </div>
+          </div>
+          <div class="finta-gallery-dots" aria-label="Выбрать изображение">
+            <button type="button" class="is-active" data-gallery-index="0" aria-label="Изображение 1" aria-current="true"></button>
+            <button type="button" data-gallery-index="1" aria-label="Изображение 2"></button>
+          </div>
+        </section>
+      </section>
+
+      <!-- СДЕЛАНО -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card">
+          <span class="case-card-label">Сделано</span>
+          <h3 class="finta-section-title">Комплекс продуктовых и&nbsp;исследовательских решений:</h3>
+          <ul class="finta-done-grid">
+            <li><strong>UX-дискавери и JTBD:</strong> выявил боли 3 аудиторий (студенты, преподаватели, авторы) и&nbsp;сформулировал конкретные Job Stories.</li>
+            <li><strong>Конкурентный бенчмаркинг:</strong> проанализировал ТЕКСТ.РУ, Paperpal и&nbsp;GPTzero, переняв лучшие паттерны zero-prompt и&nbsp;человеческих вердиктов.</li>
+            <li><strong>Продуктовые гипотезы:</strong> протестировал взаимосвязь вердикта, саджестов и&nbsp;кликабельных переходов со&nbsp;снижением drop-off.</li>
+            <li><strong>Сценарий ассистента (Web 1920×1080):</strong> детально проработал флоу от&nbsp;открытия диалога до&nbsp;перехода к&nbsp;главе документа.</li>
+            <li><strong>Адаптивность (Tablet &amp; Mobile):</strong> спроектировал сплит-панель для&nbsp;планшетов и&nbsp;выдвижной Bottom Sheet для&nbsp;смартфонов.</li>
+            <li><strong>Локальная дизайн-система:</strong> разработал интерактивную матрицу компонентов, включая 14 состояний инпута с&nbsp;голосовым вводом.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- РЕЗУЛЬТАТЫ / ПРОДУКТОВЫЙ IMPACT -->
+      <section class="case-stack reveal reveal-delay-1">
+        <article class="case-block case-card case-card-result">
+          <span class="case-card-label">Результаты · Цели и&nbsp;Impact</span>
+          <p class="case-result-statement">
+            Внедрение AI-ассистента трансформировало статичный отчёт в&nbsp;активный рабочий инструмент: пользователи больше не&nbsp;паникуют из-за процентов оригинальности, сразу получают понятный план правок и&nbsp;переходят к&nbsp;редактированию текста в&nbsp;один клик.
+          </p>
+          <div class="finta-metrics-grid">
+            <div class="finta-metric-item">
+              <span class="finta-metric-val">75%</span>
+              <span class="finta-metric-label">Пользователей взаимодействуют с&nbsp;AI-ассистентом прямо со&nbsp;стартового экрана</span>
+            </div>
+            <div class="finta-metric-item">
+              <span class="finta-metric-val">-40%</span>
+              <span class="finta-metric-label">Снижение Drop-off: пользователи перестали бросать отчёт после первого взгляда</span>
+            </div>
+            <div class="finta-metric-item">
+              <span class="finta-metric-val">1&nbsp;клик</span>
+              <span class="finta-metric-label">Мгновенный переход из&nbsp;ответа ассистента к&nbsp;проблемному разделу в&nbsp;документе</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- НАВИГАЦИЯ -->
+      <section class="case-nav reveal reveal-delay-1">
+        <a class="case-nav-link" href="taxi-troika/">
+          <span>&larr; Previous case</span>
+          <div class="case-nav-title">
+            <span class="case-nav-logo-wrap" aria-hidden="true">
+              <img class="case-nav-logo case-nav-logo-default" src="assets/images/troika-logo.svg" alt="">
+              <img class="case-nav-logo case-nav-logo-hover" src="assets/images/troika-logo-invert.svg" alt="">
+            </span>
+            <strong>TAXI TROIKA</strong>
+          </div>
+        </a>
+        <a class="case-nav-link" href="finta/">
+          <span>Next case &rarr;</span>
+          <div class="case-nav-title">
+            <span class="case-nav-logo-wrap" aria-hidden="true">
+              <img class="case-nav-logo case-nav-logo-default" src="assets/images/finta-logo.svg" alt="">
+              <img class="case-nav-logo case-nav-logo-hover" src="assets/images/finta-logo-invert.svg" alt="">
+            </span>
+            <strong>FINTA</strong>
+          </div>
+        </a>
+      </section>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

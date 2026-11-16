@@ -349,6 +349,12 @@ a {
   box-shadow: 0 22px 50px rgba(0, 109, 255, 0.22);
 }
 
+.project-card-antiplagiat:hover {
+  background: #216cff;
+  color: #ffffff;
+  box-shadow: 0 22px 50px rgba(33, 108, 255, 0.22);
+}
+
 .project-card:hover .project-type,
 .project-card:hover p:last-child,
 .project-card:hover .case-number {
@@ -394,6 +400,11 @@ a {
   transform-style: preserve-3d;
   animation: silkway-float 4.8s ease-in-out infinite;
   transition: filter 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.logo-stack-antiplagiat {
+  width: 170px;
+  height: 50px;
 }
 
 .logo-layer {
@@ -729,6 +740,11 @@ a {
   flex: 0 0 auto;
 }
 
+.case-nav-logo-wrap-antiplagiat {
+  width: 76px;
+  height: 20px;
+}
+
 .case-nav-logo {
   position: absolute;
   inset: 0;
@@ -1025,6 +1041,11 @@ a {
   .logo-stack {
     width: 96px;
     height: 96px;
+  }
+
+  .logo-stack-antiplagiat {
+    width: 130px;
+    height: 38px;
   }
 
   .contact-item {
