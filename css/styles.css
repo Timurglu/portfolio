@@ -835,6 +835,39 @@ a {
   object-fit: contain;
 }
 
+.gallery-row-mobile-second {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mobile-step-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.mobile-step-card img {
+  display: block;
+  width: 100%;
+  max-height: 540px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.mobile-step-card figcaption {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
 .lawber-screens img {
   width: 190px;
   max-width: 100%;
@@ -985,8 +1018,9 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .gallery-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .gallery-row,
+  .gallery-row-mobile-second {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
   .project-card {
@@ -1535,7 +1569,8 @@ a {
 }
 
 @media (max-width: 480px) {
-  .gallery-row {
+  .gallery-row,
+  .gallery-row-mobile-second {
     grid-template-columns: 1fr !important;
   }
 

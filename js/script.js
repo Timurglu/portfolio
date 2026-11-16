@@ -51,6 +51,15 @@ document.querySelectorAll("[data-finta-gallery]").forEach((fintaGallery) => {
   const dots = Array.from(fintaGallery.querySelectorAll("[data-gallery-index]"));
   const count = fintaGallery.querySelector(".finta-gallery-count");
   const label = fintaGallery.querySelector(".finta-gallery-label");
+  const controls = fintaGallery.querySelector(".finta-gallery-controls");
+  const dotsWrap = fintaGallery.querySelector(".finta-gallery-dots");
+
+  if (slides.length <= 1) {
+    if (controls) controls.style.display = "none";
+    if (dotsWrap) dotsWrap.style.display = "none";
+    return;
+  }
+
   let activeSlide = 0;
 
   const showSlide = (index) => {
