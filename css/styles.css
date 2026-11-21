@@ -968,8 +968,8 @@ a {
 .antiplagiat-prototype {
   display: block;
   width: 100%;
-  height: min(76vh, 780px);
-  height: min(76svh, 780px);
+  height: min(88vh, 884px);
+  height: min(88svh, 884px);
   border: 1px solid var(--line-soft);
   background: var(--bg);
 }
