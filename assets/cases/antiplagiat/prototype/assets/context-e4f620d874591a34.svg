@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Assistant Icon">
+<path id="Vector" d="M9.20222 3.90383C9.46196 3.14317 10.538 3.14317 10.7978 3.90383L11.4775 5.89404C11.6856 6.50383 12.0306 7.05782 12.4861 7.51349C12.9417 7.96916 13.4956 8.31437 14.1053 8.52263L16.0955 9.20234C16.857 9.46207 16.857 10.5381 16.0955 10.7979L14.1053 11.4776C13.4956 11.6858 12.9418 12.0308 12.4863 12.4864C12.0308 12.9419 11.6857 13.4957 11.4775 14.1053L10.7978 16.0955C10.538 16.857 9.46196 16.857 9.20222 16.0955L8.5225 14.1053C8.31433 13.4957 7.96923 12.9419 7.51371 12.4864C7.05819 12.0308 6.50435 11.6858 5.89471 11.4776L3.90447 10.7979C3.14295 10.5381 3.14295 9.46207 3.90447 9.20234L5.89471 8.52263C6.50435 8.31446 7.05819 7.96937 7.51371 7.51386C7.96923 7.05834 8.31433 6.50451 8.5225 5.89488L9.20222 3.90383Z" fill="white" stroke-width="1.5" stroke-linejoin="round" stroke="url(#paint0_radial_0_76)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_76" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.51466 9.84227) rotate(-90) scale(6.66512 6.66849)">
+<stop offset="0.26" stop-color="#216CFF"/>
+<stop offset="1" stop-color="#216CFF"/>
+</radialGradient>
+</defs>
+</svg>

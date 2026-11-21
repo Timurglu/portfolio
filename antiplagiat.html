@@ -9,8 +9,10 @@ redirect_from:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="{{ site.baseurl }}/">
+  <link rel="canonical" href="https://timurglu.github.io/portfolio/antiplagiat/">
+  <meta name="author" content="Тимур Глухов">
   <title>Антиплагиат&nbsp;— Тимур Глухов</title>
-  <meta name="description" content="Кейс Антиплагиат: проектирование AI-ассистента на странице результатов проверки, JTBD, zero-prompt подсказки и дизайн-система.">
+  <meta name="description" content="Кейс Антиплагиат: проектирование AI-ассистента на странице результатов проверки, JTBD, интерактивный прототип, zero-prompt подсказки и дизайн-система.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -53,7 +55,7 @@ redirect_from:
   <noscript><div><img src="https://mc.yandex.ru/watch/108725720" style="position:absolute; left:-9999px;" alt=""></div></noscript>
   <div class="site-shell">
     <header class="topbar">
-      <a class="brand" href="">TIMUR GLUHOV</a>
+      <a class="brand" href="{{ site.baseurl }}/" rel="author" aria-label="Тимур Глухов — главная страница портфолио">TIMUR GLUHOV</a>
       <nav class="nav"><a href="#work">Кейсы</a><a href="#contact">Контакты</a></nav>
     </header>
     <main class="case-page">
@@ -329,7 +331,7 @@ redirect_from:
             <li><strong>UX-дискавери и JTBD:</strong> выявил боли 3 аудиторий (студенты, преподаватели, авторы) и&nbsp;сформулировал конкретные Job Stories.</li>
             <li><strong>Конкурентный бенчмаркинг:</strong> проанализировал ТЕКСТ.РУ, Paperpal и&nbsp;GPTzero, переняв лучшие паттерны zero-prompt и&nbsp;человеческих вердиктов.</li>
             <li><strong>Продуктовые гипотезы:</strong> протестировал взаимосвязь вердикта, саджестов и&nbsp;кликабельных переходов со&nbsp;снижением drop-off.</li>
-            <li><strong>Сценарий ассистента (Web 1920×1080):</strong> детально проработал флоу от&nbsp;открытия диалога до&nbsp;перехода к&nbsp;главе документа.</li>
+            <li><strong>Интерактивный прототип ассистента:</strong> собрал сценарий от&nbsp;выбора подсказки до&nbsp;ответа и&nbsp;его оценки для&nbsp;компьютера, планшета и&nbsp;телефона.</li>
             <li><strong>Адаптивность (Tablet &amp; Mobile):</strong> спроектировал сплит-панель для&nbsp;планшетов и&nbsp;выдвижной Bottom Sheet для&nbsp;смартфонов.</li>
             <li><strong>Локальная дизайн-система:</strong> разработал интерактивную матрицу компонентов, включая 14 состояний инпута с&nbsp;голосовым вводом.</li>
           </ul>
@@ -382,6 +384,20 @@ redirect_from:
             <strong>Sber CIB</strong>
           </div>
         </a>
+      </section>
+
+      <!-- ИНТЕРАКТИВНЫЙ ПРОТОТИП -->
+      <section id="prototype" class="case-stack">
+        <article class="case-block case-card">
+          <span class="case-card-label">Интерактивный прототип</span>
+          <h2 class="case-split-heading">Как ассистент объясняет результаты проверки</h2>
+          <p>
+            Выберите подсказку «Объяснить маркеры ИИ» и&nbsp;отправьте вопрос. Ассистент покажет пример разбора текста. Над&nbsp;макетом можно переключиться между компьютером, планшетом и&nbsp;телефоном.
+          </p>
+          <a class="prototype-link" href="assets/cases/antiplagiat/prototype/">Открыть прототип отдельно <span aria-hidden="true">→</span></a>
+          <iframe class="antiplagiat-prototype" src="assets/cases/antiplagiat/prototype/"
+            title="Интерактивный прототип AI-ассистента Антиплагиата" loading="lazy"></iframe>
+        </article>
       </section>
     </main>
   </div>

@@ -1,0 +1,18 @@
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Icon/Arow/Down" clip-path="url(#clip0_4093_28117)">
+<g id="Vector">
+<use xlink:href="#stroke0_4093_28117" fill="white"/>
+<mask id="stroke1_4093_28117" maskUnits="userSpaceOnUse" x="2" y="-1.31134e-07" width="8" height="12" fill="black">
+<rect fill="white" x="2" y="-1.31134e-07" width="8" height="12"/>
+<use xlink:href="#stroke0_4093_28117"/>
+</mask>
+<path d="M3.22781 2.27125C2.92406 1.98043 2.92406 1.50893 3.22781 1.21811C3.53155 0.927296 4.02401 0.927296 4.32775 1.21811L8.77219 5.47343C9.07593 5.76425 9.07593 6.23575 8.77219 6.52657L4.32775 10.7819C4.02401 11.0727 3.53155 11.0727 3.22781 10.7819C2.92407 10.4911 2.92407 10.0196 3.22781 9.72875L7.12441 5.99796L3.22781 2.27125Z" stroke-width="0.6" stroke="white" mask="url(#stroke1_4093_28117)"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_4093_28117">
+<rect width="12" height="12" fill="white" transform="translate(0 12) rotate(-90)"/>
+</clipPath>
+<path id="stroke0_4093_28117" d="M3.22781 2.27125C2.92406 1.98044 2.92406 1.50893 3.22781 1.21811C3.53155 0.927296 4.02401 0.927296 4.32775 1.21811L8.77219 5.47343C9.07593 5.76425 9.07593 6.23575 8.77219 6.52657L4.32775 10.7819C4.02401 11.0727 3.53155 11.0727 3.22781 10.7819C2.92407 10.4911 2.92407 10.0196 3.22781 9.72875L7.12441 5.99796L3.22781 2.27125Z" fill-rule="evenodd" clip-rule="evenodd"/>
+</defs>
+</svg>

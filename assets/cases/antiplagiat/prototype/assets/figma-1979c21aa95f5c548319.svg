@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Icon Button">
+<rect width="48" height="48" rx="8" fill="white"/>
+<g id="Icon/Arow/Up">
+<g id="Vector">
+<use xlink:href="#stroke0_4049_11235" fill="#3C3C3C"/>
+<mask id="stroke1_4049_11235" maskUnits="userSpaceOnUse" x="9.66699" y="15" width="28" height="18" fill="black">
+<rect fill="white" x="9.66699" y="15" width="28" height="18"/>
+<use xlink:href="#stroke0_4049_11235"/>
+</mask>
+<path d="M33.9437 31.3925C34.7192 32.2025 35.9765 32.2025 36.752 31.3925C37.5275 30.5825 37.5275 29.2693 36.752 28.4593L25.4045 16.6075C24.629 15.7975 23.3717 15.7975 22.5961 16.6075L11.2486 28.4593C10.4731 29.2693 10.4731 30.5825 11.2486 31.3925C12.0241 32.2025 13.2815 32.2025 14.057 31.3925L24.0058 21.0016L33.9437 31.3925Z" stroke-width="0.6" stroke="#3C3C3C" mask="url(#stroke1_4049_11235)"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="stroke0_4049_11235" d="M33.9437 31.3925C34.7192 32.2025 35.9765 32.2025 36.752 31.3925C37.5275 30.5825 37.5275 29.2693 36.752 28.4593L25.4045 16.6075C24.629 15.7975 23.3717 15.7975 22.5961 16.6075L11.2486 28.4593C10.4731 29.2693 10.4731 30.5825 11.2486 31.3925C12.0241 32.2025 13.2815 32.2025 14.057 31.3925L24.0058 21.0016L33.9437 31.3925Z" fill-rule="evenodd" clip-rule="evenodd"/>
+</defs>
+</svg>
