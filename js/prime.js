@@ -82,7 +82,8 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 const themeToggle = byId("theme-toggle");
 function updateTheme() {
-  const preference = readValue("theme");
+  const urlTheme = new URLSearchParams(window.location.search).get("theme");
+  const preference = urlTheme || readValue("theme");
   const theme = preference === "dark" || preference === "light"
     ? preference : (systemTheme.matches ? "dark" : "light");
   const dark = theme === "dark";

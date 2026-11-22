@@ -10,7 +10,8 @@
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <script>
     try {
-      const theme = JSON.parse(localStorage.getItem("timur-portfolio.prime.v1.theme"));
+      const urlTheme = new URLSearchParams(location.search).get("theme");
+      const theme = urlTheme || JSON.parse(localStorage.getItem("timur-portfolio.prime.v1.theme"));
       document.documentElement.dataset.theme = theme === "light" || theme === "dark"
         ? theme : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     } catch {}
@@ -18,8 +19,10 @@
   <link rel="stylesheet" href="../css/prime.css">
   <link rel="stylesheet" href="../css/version-switch.css">
   <link rel="stylesheet" href="../css/pull-cord.css">
+  <link rel="stylesheet" href="../css/assistant.css">
   <script src="../js/icon-motion.js" defer></script>
   <script src="../js/pull-cord.js" defer></script>
+  <script src="../js/assistant.js" defer></script>
   <script type="module" src="../js/prime.js"></script>
   <link rel="stylesheet" href="../css/icon-motion.css">
 </head>
@@ -342,5 +345,55 @@
       </div>
     </div>
   </dialog>
+
+  <!-- 3D Character Assistant ("Виртуальный Тимур") -->
+  <aside class="assistant-widget" id="timur-assistant" aria-label="3D-помощник Тимура">
+    <div class="assistant-trigger-wrap">
+      <div class="assistant-teaser" id="assistant-teaser" role="button" tabindex="0" title="Открыть диалог">
+        <span>👋 Привет! Я 3D-помощник Тимура</span>
+        <button type="button" class="assistant-teaser-close" id="assistant-teaser-close" aria-label="Скрыть подсказку">&times;</button>
+      </div>
+      <button type="button" class="assistant-avatar-btn" id="assistant-avatar-btn" aria-label="Открыть диалог с 3D-помощником Тимура" aria-haspopup="dialog">
+        <img class="assistant-avatar-img" src="../assets/images/avatar-3d-cutout.png" alt="3D-аватар Тимура">
+        <span class="assistant-online-badge" aria-label="Онлайн"></span>
+      </button>
+    </div>
+
+    <div class="assistant-chat-panel" id="assistant-chat-panel" role="dialog" aria-modal="true" aria-label="Чат с 3D-помощником">
+      <div class="assistant-chat-header">
+        <div class="assistant-header-profile">
+          <div class="assistant-header-avatar">
+            <img src="../assets/images/avatar-3d-cutout.png" alt="Тимур 3D">
+          </div>
+          <div class="assistant-header-info">
+            <span class="assistant-header-title">Тимур • 3D AI-помощник</span>
+            <span class="assistant-header-subtitle"><span class="assistant-online-dot"></span> Отвечаю на любые вопросы</span>
+          </div>
+        </div>
+        <button type="button" class="assistant-close-btn" id="assistant-close-btn" aria-label="Закрыть чат">&times;</button>
+      </div>
+
+      <div class="assistant-chat-messages" id="assistant-chat-messages" role="log" aria-live="polite">
+        <div class="assistant-msg bot">
+          <div class="assistant-msg-bubble">
+            Привет! Я виртуальный 3D-помощник Тимура Глухова 👋<br><br>
+            Я могу рассказать о его опыте в FinTech и B2B, разобрать кейсы («Антиплагиат», Sber CIB, Silkway), поделиться стеком инструментов или помочь связаться с Тимуром напрямую.
+          </div>
+        </div>
+      </div>
+
+      <div class="assistant-suggestions" id="assistant-suggestions" role="group" aria-label="Быстрые вопросы"></div>
+
+      <form class="assistant-chat-form" id="assistant-chat-form">
+        <input type="text" class="assistant-chat-input" id="assistant-chat-input" placeholder="Спросите о чём угодно..." aria-label="Сообщение помощнику">
+        <button type="submit" class="assistant-send-btn" id="assistant-send-btn" aria-label="Отправить" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </aside>
 </body>
 </html>
