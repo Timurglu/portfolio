@@ -87,15 +87,20 @@ function updateTheme() {
     ? preference : (systemTheme.matches ? "dark" : "light");
   const dark = theme === "dark";
   document.documentElement.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]').content = dark ? "#19191c" : "#f7f7f4";
-  themeToggle.setAttribute("aria-pressed", String(dark));
-  setGlyph(byId("theme-glyph"), dark ? "sun" : "moon");
-  themeToggle.title = dark ? "Включить светлую тему" : "Включить тёмную тему";
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+  if (metaTheme) metaTheme.content = dark ? "#19191c" : "#f7f7f4";
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-pressed", String(dark));
+    setGlyph(byId("theme-glyph"), dark ? "sun" : "moon");
+    themeToggle.title = dark ? "Включить светлую тему" : "Включить тёмную тему";
+  }
 }
-themeToggle.addEventListener("click", () => {
-  writeValue("theme", document.documentElement.dataset.theme === "dark" ? "light" : "dark");
-  updateTheme();
-});
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    writeValue("theme", document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    updateTheme();
+  });
+}
 systemTheme.addEventListener("change", updateTheme);
 updateTheme();
 

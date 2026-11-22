@@ -3,4 +3,6 @@ Thumbs.db
 server.py
 research/
 node_modules/
+__pycache__/
+start-localhost.command
 

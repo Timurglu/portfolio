@@ -17,7 +17,9 @@
   </script>
   <link rel="stylesheet" href="../css/prime.css">
   <link rel="stylesheet" href="../css/version-switch.css">
+  <link rel="stylesheet" href="../css/pull-cord.css">
   <script src="../js/icon-motion.js" defer></script>
+  <script src="../js/pull-cord.js" defer></script>
   <script type="module" src="../js/prime.js"></script>
   <link rel="stylesheet" href="../css/icon-motion.css">
 </head>
@@ -48,12 +50,22 @@
         <nav class="version-switch" aria-label="Версия сайта">
           <a href="../">Обычная</a><a href="#prime-top" aria-current="page" data-icon-motion><svg data-motion-icon data-icon-effect="spark" aria-hidden="true"><use href="#spark"/></svg>ПРАЙМ</a>
         </nav>
-        <button class="theme-button" id="theme-toggle" data-icon-motion type="button" aria-label="Тёмная тема" aria-pressed="false" title="Включить тёмную тему">
-          <svg class="ico" id="theme-glyph" viewBox="0 0 24 24" data-motion-icon data-morph="theme" aria-hidden="true">
-            <path data-glyph d="M10 3 C8 6 8.4 10 11.2 12.8 C14 15.6 18 16 21 14 C19.7 18.2 16.1 21 12 21 C1 21 1.2 5.6 10 3 Z"/>
-            <path data-glyph-detail d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
-          </svg>
-        </button>
+        <div class="pull-cord" id="pull-cord" aria-label="Переключатель темы">
+          <div class="pull-cord-scene" id="pull-cord-scene">
+            <svg class="pull-cord-wire" aria-hidden="true"><path d=""/></svg>
+            <div class="pull-cord-lamp" aria-hidden="true">
+              <div class="pull-cord-head">
+                <i class="pull-cord-glow"></i>
+                <i class="pull-cord-bulb"></i>
+                <i class="pull-cord-shade"></i>
+                <i class="pull-cord-cap"></i>
+              </div>
+            </div>
+            <svg class="pull-cord-rope" aria-hidden="true"><path d=""/></svg>
+            <i class="pull-cord-bead" aria-hidden="true"></i>
+            <button class="pull-cord-grab" id="pull-cord-grab" role="switch" aria-checked="false" aria-label="Переключатель темы: светлая / тёмная" title="Потяните за шнурок, чтобы переключить тему"></button>
+          </div>
+        </div>
       </div>
     </header>
 
