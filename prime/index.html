@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>ПРАЙМ — портфолио Тимура Глухова</title>
+  <meta name="description" content="Интерактивная версия портфолио Тимура Глухова. Смотрите сторис о дизайне, изучайте кейсы и выполняйте задания.">
+  <link rel="canonical" href="https://timurglu.github.io/portfolio/prime/">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <script>
+    try {
+      const theme = JSON.parse(localStorage.getItem("timur-portfolio.prime.v1.theme"));
+      document.documentElement.dataset.theme = theme === "light" || theme === "dark"
+        ? theme : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    } catch {}
+  </script>
+  <link rel="stylesheet" href="../css/prime.css">
+  <link rel="stylesheet" href="../css/version-switch.css">
+  <script src="../js/icon-motion.js" defer></script>
+  <script type="module" src="../js/prime.js"></script>
+  <link rel="stylesheet" href="../css/icon-motion.css">
+</head>
+<body>
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M10 0h4v7.2l5.1-5.1 2.8 2.8L16.8 10H24v4h-7.2l5.1 5.1-2.8 2.8-5.1-5.1V24h-4v-7.2l-5.1 5.1-2.8-2.8L7.2 14H0v-4h7.2L2.1 4.9l2.8-2.8L10 7.2z"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M19 10c0 5.3-7 11-7 11S5 15.3 5 10a7 7 0 1 1 14 0Z"/><circle data-motion-part="dot" cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="cross" viewBox="0 0 24 24"><path data-motion-part="stroke" d="m6 6 12 12"/><path data-motion-part="stroke" d="M18 6 6 18"/></symbol>
+    <symbol id="award" viewBox="0 0 24 24"><path data-motion-part="ribbon" d="m7.7 14.7-1.1 6 3-1.3 2.1 2 1.1-6.2m2.9-1 2 5.4-2.8-.6-1.6 2.2-1.4-4.2"/><g data-motion-part="seal"><circle cx="11.7" cy="9" r="6.8"/><path d="m9 9 1.8 1.8L14 7"/></g></symbol>
+    <symbol id="layers" viewBox="0 0 24 24"><path data-motion-part="layer" d="m3 8 9-5 9 5-9 5z"/><path data-motion-part="layer" d="m3 12 9 5 9-5"/><path data-motion-part="layer" d="m3 16 9 5 9-5"/></symbol>
+    <symbol id="categories" viewBox="0 0 24 24">
+      <rect data-motion-part="tile" x="5" y="5" width="5" height="5"/>
+      <rect data-motion-part="tile" x="14" y="5" width="5" height="5"/>
+      <rect data-motion-part="tile" x="5" y="14" width="5" height="5"/>
+      <rect data-motion-part="tile" x="14" y="14" width="5" height="5"/>
+    </symbol>
+    <symbol id="confirm" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="moscow-sky" viewBox="0 0 200 108" preserveAspectRatio="xMaxYMax meet">
+      <path fill="currentColor" opacity=".32" d="M0 104h12V85h9v7h10V77h9v10h9v-7h13v12h9V71h12v12h15V70h8v19h9V78h12v13h12V76h9v12h15V67h7v20h13V76h10v12h12v20H0z"/>
+      <path fill="currentColor" opacity=".66" d="M0 108v-9h18v-8h20v8h14v-7h12v-8h9V69l4-4 3-12 3 12 4 4v15h9v9h14V80l5-2V62l6-3 8-16v36h9v15h11v-9h9V74l7-8 5 8v12h8v10h22v12z"/>
+    </symbol>
+  </svg>
+  <div class="shell">
+    <header class="masthead topbar--versions" id="prime-top" tabindex="-1">
+      <a class="brand" href="#prime-top" data-icon-motion><img data-motion-icon src="../assets/images/favicon.svg" alt="">TIMUR GLUHOV</a>
+      <nav class="nav" aria-label="ПРАЙМ"><a href="#work">Кейсы</a><a href="#contact">Контакты</a><button type="button" id="plan-nav" aria-haspopup="dialog">Подписка</button></nav>
+      <div class="header-controls">
+        <nav class="version-switch" aria-label="Версия сайта">
+          <a href="../">Обычная</a><a href="#prime-top" aria-current="page" data-icon-motion><svg data-motion-icon data-icon-effect="spark" aria-hidden="true"><use href="#spark"/></svg>ПРАЙМ</a>
+        </nav>
+        <button class="theme-button" id="theme-toggle" data-icon-motion type="button" aria-label="Тёмная тема" aria-pressed="false" title="Включить тёмную тему">
+          <svg class="ico" id="theme-glyph" viewBox="0 0 24 24" data-motion-icon data-morph="theme" aria-hidden="true">
+            <path data-glyph d="M10 3 C8 6 8.4 10 11.2 12.8 C14 15.6 18 16 21 14 C19.7 18.2 16.1 21 12 21 C1 21 1.2 5.6 10 3 Z"/>
+            <path data-glyph-detail d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-heading">
+        <h1 data-icon-motion>Прайм-лента<span class="title-spark" data-motion-icon data-icon-effect="spark" aria-hidden="true"><svg><use href="#spark"/></svg></span></h1>
+        <button class="weather sky" id="weather-open" data-icon-motion type="button" aria-haspopup="dialog" aria-controls="weather-dialog">
+          <span class="sky-motion" aria-hidden="true">
+            <i class="sky-disc"></i><i class="sky-clouds"></i><i class="sky-particles"></i>
+          </span>
+          <svg class="sky-art" aria-hidden="true"><use href="#moscow-sky"/></svg>
+          <span class="weather-city"><svg class="ico" data-motion-icon data-icon-effect="pin" aria-hidden="true"><use href="#pin"/></svg>Москва <strong id="temperature"></strong></span>
+          <span id="conditions">Загружаем погоду…</span>
+          <span class="weather-meta"><span id="observed-at"></span><span class="weather-more">Прогноз</span></span>
+        </button>
+      </div>
+
+      <aside id="project-ad" class="promo" data-prime-ad aria-labelledby="promo-title">
+        <div class="promo-art" aria-hidden="true">
+          <img class="promo-desktop" src="../assets/cases/antiplagiat/web-05-response-analysis.png" alt="">
+          <img class="promo-phone" src="../assets/cases/antiplagiat/mobile-02-assistant-open.png" alt="">
+        </div>
+        <div class="promo-copy">
+          <h2 id="promo-title">Антиплагиат<br> изнутри<span>.</span></h2>
+          <p>Попробуйте AI-ассистента в интерактивном прототипе отчёта.</p>
+          <a class="promo-link" href="#prototype-antiplagiat" aria-haspopup="dialog" data-icon-motion>Открыть прототип <svg class="ico" data-motion-icon data-icon-effect="layers" aria-hidden="true"><use href="#layers"/></svg></a>
+        </div>
+      </aside>
+
+      <section class="stories" aria-labelledby="stories-heading">
+        <div class="section-head"><h2 id="stories-heading">Сторис</h2></div>
+        <div id="stories" class="story-strip"></div>
+      </section>
+      <div class="lower-grid">
+        <section class="recommendations" id="work" aria-labelledby="feed-heading" tabindex="-1">
+          <div class="section-head"><h2 id="feed-heading">Рекомендации</h2></div>
+          <div class="filters" id="filters" role="group" aria-label="Фильтр рекомендаций">
+            <button type="button" aria-pressed="true" data-filter="all">Все</button>
+            <button type="button" aria-pressed="false" data-filter="web">Веб</button>
+            <button type="button" aria-pressed="false" data-filter="mobile">Мобильные</button>
+          </div>
+          <div id="feed" class="feed"></div>
+          <noscript><p>Включите JavaScript, чтобы открыть кейсы и сторис.</p></noscript>
+        </section>
+
+        <aside class="widgets" aria-label="Возможности ПРАЙМ">
+          <section class="services-ad widget" data-prime-ad aria-labelledby="services-title">
+            <h2 id="services-title">Дизайн для вашего продукта</h2>
+            <p>Спроектирую интерфейс сайта или приложения и соберу интерактивный прототип.</p>
+            <a class="dark-btn" href="#contact" data-icon-motion>
+              Обсудить проект <svg class="ico" data-motion-icon data-icon-effect="next" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </section>
+          <section class="plan-widget widget" aria-labelledby="plan-title">
+            <div class="plan-heading" data-icon-motion>
+              <h2 id="plan-title">ПРАЙМ+</h2>
+              <svg data-motion-icon data-icon-effect="spark" aria-hidden="true"><use href="#spark"/></svg>
+            </div>
+            <p id="plan-summary" aria-live="polite">скрывает друзей рекламу от Тимурки</p>
+            <button type="button" class="dark-btn" id="plan-open" data-icon-motion aria-haspopup="dialog">
+              <svg class="button-icon" data-motion-icon data-icon-effect="spark" aria-hidden="true"><use href="#spark"/></svg>
+              <span id="plan-open-label">Оформить подписку</span>
+            </button>
+          </section>
+          <section class="progress-widget widget" aria-labelledby="progress-title">
+            <div class="widget-icon" data-icon-motion><svg class="ico" id="progress-icon" data-motion-icon data-icon-effect="medal" aria-hidden="true"><use href="#award"/></svg></div>
+            <h2 id="progress-title">Ваш прогресс</h2>
+            <div class="level-status" aria-live="polite" aria-atomic="true">
+              <p id="current-level">Уровень 1 из 4</p>
+              <p id="progress-text">Выполнено заданий 0 из 3</p>
+            </div>
+            <div class="level-track">
+              <progress id="progress" max="3" value="0" aria-hidden="true"></progress>
+              <ol id="progress-levels" aria-label="Уровни" role="list">
+                <li class="is-reached" aria-current="step"><span class="sr-only">Уровень </span>1</li>
+                <li><span class="sr-only">Уровень </span>2</li>
+                <li><span class="sr-only">Уровень </span>3</li>
+                <li><span class="sr-only">Уровень </span>4</li>
+              </ol>
+            </div>
+            <ul id="tasks">
+              <li data-task="story"><svg class="ico task-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg><span class="sr-only"></span>Досмотреть сторис</li>
+              <li data-task="case"><svg class="ico task-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg><span class="sr-only"></span>Открыть кейс из ленты</li>
+              <li data-task="cashback"><svg class="ico task-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg><span class="sr-only"></span>Выбрать кэшбэк</li>
+            </ul>
+          </section>
+          <section class="cash-widget widget" aria-labelledby="cash-title">
+            <h2 id="cash-title">Кэшбэк <span id="cash-month"></span></h2>
+            <p id="cash-summary" aria-live="polite">Выберите две категории на следующий месяц.</p>
+            <button type="button" class="dark-btn" id="cash-open" data-icon-motion>
+              <svg class="ico" data-motion-icon data-icon-effect="grid" aria-hidden="true"><use href="#categories"/></svg>
+              <span id="cash-open-label">Выбрать категории</span>
+            </button>
+          </section>
+        </aside>
+      </div>
+      <section id="contact" class="contacts" aria-labelledby="contact-title" tabindex="-1">
+        <div class="section-head"><h2 id="contact-title">Контакты</h2></div>
+        <ul class="contact-links" role="list">
+          <li>
+            <a href="https://t.me/Timurgl" target="_blank" rel="noreferrer" data-icon-motion>
+              <span class="contact-channel">Telegram
+                <svg class="ico" viewBox="0 0 24 24" data-motion-icon data-icon-effect="plane" aria-hidden="true"><path data-motion-part="trail" d="m3 19 4-4m-3 7 2-2"/><path data-motion-part="plane" d="m21 3-7 18-3.5-7.5L3 10zM10.5 13.5 21 3"/></svg>
+              </span>
+              <strong>@Timurgl</strong>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:gluhovtimurdm@yandex.ru" data-icon-motion>
+              <span class="contact-channel">Почта
+                <svg class="ico" viewBox="0 0 24 24" data-motion-icon data-icon-effect="envelope" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path data-motion-part="flap" d="m4 7 8 6 8-6"/><path data-motion-part="letter" d="M8 8V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3M10.7 6.7h2.6"/></svg>
+              </span>
+              <strong>gluhovtimurdm@yandex.ru</strong>
+            </a>
+          </li>
+          <li>
+            <a href="../assets/timur-gluhov-cv.pdf" target="_blank" rel="noopener" data-icon-motion>
+              <span class="contact-channel">Резюме
+                <svg class="ico" viewBox="0 0 24 24" data-motion-icon data-icon-effect="document" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path data-motion-part="fold" d="M14 3v4h4"/><path data-motion-part="rule" pathLength="1" d="M9 11h6"/><path data-motion-part="rule" pathLength="1" d="M9 15h6"/></svg>
+              </span>
+              <strong>Открыть PDF</strong>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer><a class="brand" href="#prime-top">TIMUR GLUHOV</a><a href="#contact">Контакты</a></footer>
+  </div>
+
+  <dialog id="case-dialog" class="case-dialog" aria-labelledby="case-view-title">
+    <div class="case-view">
+      <div class="picker-top">
+        <h2 id="case-view-title"></h2>
+        <button class="round-btn" type="button" data-close data-icon-motion aria-label="Закрыть просмотр" autofocus><svg class="ico" data-motion-icon data-icon-effect="close" aria-hidden="true"><use href="#cross"/></svg></button>
+      </div>
+      <iframe id="case-frame" title="Кейс"></iframe>
+    </div>
+  </dialog>
+  <dialog id="story-dialog" class="story-dialog" aria-label="Просмотр сторис" aria-describedby="story-help">
+    <div class="story-reader">
+      <div class="story-content">
+        <div class="reader-top">
+          <div id="slide-progress" aria-hidden="true"></div>
+          <div class="slide-info">
+            <img id="slide-avatar" alt="" width="34" height="34">
+            <strong id="slide-brand"></strong><span id="slide-count"></span>
+            <button type="button" class="round-btn" id="story-pause" data-icon-motion aria-label="Приостановить сторис">
+              <svg id="playback-glyph" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" data-motion-icon data-morph="playback" aria-hidden="true">
+                <path data-glyph d="M8 5 L11 5 L11 19 L8 19 Z M14 5 L17 5 L17 19 L14 19 Z"/>
+              </svg>
+            </button>
+            <button type="button" class="round-btn" aria-label="Закрыть сторис" data-close data-icon-motion autofocus><svg class="ico" data-motion-icon data-icon-effect="close" aria-hidden="true"><use href="#cross"/></svg></button>
+          </div>
+        </div>
+        <div id="story-stage">
+          <div class="slide-visual"><img id="slide-image" alt="" draggable="false"></div>
+          <div class="slide-copy">
+            <div aria-live="polite" aria-atomic="true">
+              <span class="slide-step" id="slide-step"></span>
+              <h2 id="slide-title"></h2>
+              <p id="slide-description"></p>
+            </div>
+            <a class="slide-case" id="slide-case" href="#work" aria-haspopup="dialog" hidden>Открыть полный кейс</a>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="story-arrow" id="slide-prev" data-icon-motion aria-label="Предыдущий кадр"><svg class="ico" data-motion-icon data-icon-effect="prev" viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+      <button type="button" class="story-arrow" id="slide-next" data-icon-motion aria-label="Следующий кадр"><svg class="ico" data-motion-icon data-icon-effect="next" viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+      <p class="sr-only" id="story-help">Коснитесь слева или справа для перехода между кадрами. Удерживайте для паузы. Смахните вбок, чтобы сменить проект, или вниз, чтобы закрыть. С клавиатуры используйте стрелки, пробел и Escape.</p>
+    </div>
+  </dialog>
+  <dialog id="weather-dialog" class="weather-dialog" aria-labelledby="weather-heading">
+    <div class="weather-panel">
+      <div class="weather-hero sky" id="weather-hero">
+        <span class="sky-motion" aria-hidden="true">
+          <i class="sky-disc"></i><i class="sky-clouds"></i><i class="sky-particles"></i>
+        </span>
+        <svg class="sky-art" aria-hidden="true"><use href="#moscow-sky"/></svg>
+        <div class="picker-top"><h2 id="weather-heading">Погода в Москве</h2><button class="round-btn" type="button" data-close data-icon-motion aria-label="Закрыть прогноз"><svg class="ico" data-motion-icon data-icon-effect="close" aria-hidden="true"><use href="#cross"/></svg></button></div>
+        <div class="weather-reading" aria-live="polite" aria-atomic="true">
+          <strong id="weather-degrees">—</strong><span id="weather-description">Загружаем погоду…</span>
+          <small id="weather-stamp"></small>
+        </div>
+      </div>
+      <div class="weather-details">
+        <div class="weather-controls">
+          <h3 id="weather-hours-heading">Почасовой прогноз</h3>
+          <button type="button" id="weather-now" aria-pressed="true" hidden>Сейчас</button>
+        </div>
+        <ol id="weather-hours" aria-labelledby="weather-hours-heading"></ol>
+        <p id="weather-message" role="status"></p>
+        <div class="weather-source"><a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a><button id="weather-retry" type="button" data-icon-motion><svg class="ico" viewBox="0 0 24 24" data-motion-icon data-icon-effect="refresh" aria-hidden="true"><path d="M19.8 9A8.1 8.1 0 1 0 20 14m0-9v4.5h-4.5"/></svg>Обновить</button></div>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="plan-dialog" aria-labelledby="plan-heading">
+    <div class="plan-picker">
+      <div class="picker-top">
+        <h2 id="plan-heading">Подписка ПРАЙМ+</h2>
+        <button class="round-btn" type="button" data-close data-icon-motion aria-label="Закрыть подписку"><svg class="ico" data-motion-icon data-icon-effect="close" aria-hidden="true"><use href="#cross"/></svg></button>
+      </div>
+      <div id="plan-overview">
+        <p id="plan-status" tabindex="-1" role="status"></p>
+        <p class="plan-price">299 ₽ <small>/ месяц</small></p>
+        <p id="plan-terms"></p>
+        <p id="plan-note">При подключении деньги не списываются.</p>
+        <button type="button" class="dark-btn" id="plan-confirm">Подключить ПРАЙМ+</button>
+      </div>
+      <div id="plan-cancel-flow" hidden>
+        <div class="plan-cancel-progress">
+          <progress id="plan-cancel-progress" max="5" value="1" aria-hidden="true"></progress>
+          <span id="plan-cancel-count">1 из 5</span>
+        </div>
+        <div class="plan-cancel-message">
+          <h3 id="plan-cancel-title" tabindex="-1" aria-describedby="plan-cancel-count plan-cancel-copy"></h3>
+          <p id="plan-cancel-copy"></p>
+        </div>
+        <div class="plan-cancel-actions">
+          <button type="button" class="dark-btn" id="plan-keep">Оставить ПРАЙМ+</button>
+          <button type="button" class="dark-btn outline-btn" id="plan-cancel-now">
+            <span id="plan-cancel-label">Отменить подписку</span>
+            <span class="plan-undo-label" id="plan-undo-label" hidden>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6-5 5 5 5M4 11h10a5 5 0 0 1 5 5v2"/></svg>
+              Вернуть ПРАЙМ+
+              <span class="plan-undo-count" aria-hidden="true"><span id="plan-undo-seconds">5</span></span>
+            </span>
+            <span class="plan-undo-label" id="plan-undo-done" hidden>
+              <svg class="ico" aria-hidden="true"><use href="#confirm"/></svg>Подписка отменена
+            </span>
+            <svg class="plan-undo-outline" aria-hidden="true"><path id="plan-undo-outline" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="plan-cancel-nav" role="group" aria-label="Экраны отмены подписки">
+          <button type="button" id="plan-cancel-back">Назад</button>
+          <button type="button" id="plan-cancel-next">Далее</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="cash-dialog" class="cash-dialog" aria-labelledby="cash-dialog-title" aria-describedby="cash-hint">
+    <div class="cash-picker">
+      <div class="picker-top">
+        <h2 id="cash-dialog-title"></h2>
+        <button type="button" class="round-btn" aria-label="Закрыть выбор категорий" data-close data-icon-motion><svg class="ico" data-motion-icon data-icon-effect="close" aria-hidden="true"><use href="#cross"/></svg></button>
+      </div>
+      <p id="cash-hint">Выберите две категории на следующий месяц.</p>
+      <div id="cash-options" role="group" aria-label="Категории кэшбэка"></div>
+      <div class="picker-bottom">
+        <span id="cash-count" aria-live="polite"></span>
+        <button class="dark-btn" type="button" id="cash-save" data-icon-motion>
+          <svg class="ico" data-motion-icon aria-hidden="true"><use href="#confirm"/></svg> Сохранить
+        </button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

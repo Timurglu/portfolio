@@ -1,0 +1,10 @@
+{
+  "name": "timur-portfolio",
+  "private": true,
+  "scripts": {
+    "sync:morphicons": "mkdir -p assets/vendor/morphicons && cp node_modules/morphicons/LICENSE node_modules/morphicons/dist/dom.js node_modules/morphicons/dist/region*.js node_modules/morphicons/dist/normalize-*.js node_modules/morphicons/dist/resample-*.js node_modules/morphicons/dist/spring-*.js assets/vendor/morphicons/"
+  },
+  "dependencies": {
+    "morphicons": "2.0.2"
+  }
+}

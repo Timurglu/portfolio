@@ -1,0 +1,41 @@
+.version-switch {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid #d8d8d4;
+  border-radius: 8px;
+  background: #ededea;
+  font: 700 0.81rem/1.2 "Manrope", Arial, sans-serif;
+}
+.version-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 33px;
+  padding: 5px 11px;
+  border-radius: 5px;
+  color: #494947;
+  text-decoration: none;
+  transition: background-color 260ms ease, color 260ms ease;
+}
+.version-switch a:hover { background: #dededb; color: #171716; }
+.version-switch a[aria-current="page"] { background: #20201e; color: #fff; }
+.version-switch a[aria-current="page"]:hover { background: #363633; }
+.version-switch svg { width: 13px; height: 13px; color: #d5450b; }
+.version-switch a[aria-current="page"] svg { color: #ff853f; }
+.version-switch a:focus-visible { outline: 2px solid #b63e00; outline-offset: 2px; }
+.topbar--versions .nav { margin-left: auto; }
+@media (max-width: 670px) {
+  .topbar--versions { flex-wrap: wrap; gap: 12px; padding: 12px; }
+  .topbar--versions .nav { order: 1; width: 100%; margin: 0; }
+  .topbar--versions .version-switch { margin-left: auto; }
+  .topbar--versions .brand { font-size: 0.9rem; }
+  .version-switch a { padding: 5px 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .version-switch a { transition: none; }
+}

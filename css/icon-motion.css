@@ -1,0 +1,23 @@
+:where([data-motion-icon], .logo-scene, .case-nav-logo-wrap, .placeholder-icon-wrap svg) {
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where([data-motion-icon], .logo-scene, .case-nav-logo-wrap, .placeholder-icon-wrap svg) {
+    transition: transform 300ms cubic-bezier(.22,.7,.25,1);
+  }
+
+  :where([data-icon-motion]:not(:disabled), .project-card, .case-nav-link):focus-visible
+    :where([data-motion-icon]:not([data-icon-effect]), .logo-scene, .case-nav-logo-wrap, .placeholder-icon-wrap svg),
+  :where([data-icon-motion][data-motion-icon]:not(:disabled, [data-icon-effect])):focus-visible {
+    transform: translateY(-1px) scale(var(--icon-hover-scale, 1.045));
+  }
+
+  @media (hover: hover) {
+    :where([data-icon-motion]:not(:disabled), .project-card, .case-nav-link):hover
+      :where([data-motion-icon]:not([data-icon-effect]), .logo-scene, .case-nav-logo-wrap, .placeholder-icon-wrap svg),
+    :where([data-icon-motion][data-motion-icon]:not(:disabled, [data-icon-effect])):hover {
+      transform: translateY(-1px) scale(var(--icon-hover-scale, 1.045));
+    }
+  }
+}

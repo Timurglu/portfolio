@@ -1,3 +1,17 @@
+if (window !== window.top && new URLSearchParams(location.search).get("view") === "prime") {
+  const primeUrl = new URL("prime/", document.baseURI);
+  document.querySelector(".topbar")?.remove();
+  document.querySelectorAll(".case-nav-link, .prototype-link").forEach(link => {
+    const route = link.pathname.split("/").filter(Boolean).at(-1);
+    const hash = link.classList.contains("prototype-link") ? "#prototype-antiplagiat" : "#case-" + route;
+    link.href = new URL(hash, primeUrl).href;
+    link.target = "_top";
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !event.defaultPrevented) window.frameElement?.closest("dialog")?.close();
+  });
+}
+
 const revealItems = document.querySelectorAll(".reveal");
 const prototypeVideos = document.querySelectorAll(".prototype-video");
 

@@ -54,6 +54,7 @@ permalink: /
     rel="stylesheet"
   >
   <link rel="stylesheet" href="css/styles.css?v=20261116">
+  <link rel="stylesheet" href="css/version-switch.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="alternate icon" href="favicon.ico">
@@ -87,15 +88,20 @@ permalink: /
       trackLinks: true
     });
   </script>
+  <link rel="stylesheet" href="css/icon-motion.css">
 </head>
 <body>
   <noscript><div><img src="https://mc.yandex.ru/watch/108725720" style="position:absolute; left:-9999px;" alt=""></div></noscript>
   <div class="site-shell">
-    <header class="topbar">
+    <header class="topbar topbar--versions">
       <a class="brand" href="#hero">TIMUR GLUHOV</a>
       <nav class="nav">
         <a href="#work">Кейсы</a>
         <a href="#contact">Контакты</a>
+      </nav>
+      <nav class="version-switch" aria-label="Версия сайта">
+        <a href="./" aria-current="page">Обычная</a>
+        <a href="prime/" data-icon-motion><svg data-motion-icon viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 0h4v7.2l5.1-5.1 2.8 2.8L16.8 10H24v4h-7.2l5.1 5.1-2.8 2.8-5.1-5.1V24h-4v-7.2l-5.1 5.1-2.8-2.8L7.2 14H0v-4h7.2L2.1 4.9l2.8-2.8L10 7.2z"/></svg>ПРАЙМ</a>
       </nav>
     </header>
 
@@ -356,6 +362,7 @@ permalink: /
     </main>
   </div>
 
+  <script src="js/icon-motion.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

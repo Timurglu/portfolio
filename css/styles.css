@@ -806,6 +806,8 @@ a {
   letter-spacing: -0.03em;
 }
 
+.gallery-arrow-symbol { display: inline-block; }
+
 .case-nav-title {
   display: flex;
   align-items: center;
@@ -1339,8 +1341,10 @@ a {
   border-radius: 99px;
   background: rgba(17, 17, 17, 0.22);
   cursor: pointer;
-  transition: width 180ms ease, background-color 180ms ease;
+  transition: width 260ms ease, background-color 260ms ease;
 }
+
+.finta-gallery-dots button:hover { background: rgba(17, 17, 17, 0.52); }
 
 .finta-gallery-dots button.is-active {
   width: 24px;
