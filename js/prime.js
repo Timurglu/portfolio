@@ -6,7 +6,7 @@ const projects = [
   {
     id: "finta", name: "FINTA", route: "finta", type: "web", tint: "#f5e1d6",
     story: "Дашборд до и после", title: "Как упростить поиск карты и освободить место на дашборде",
-    folder: "FINTA", logo: "finta-logo.svg", preview: "after-1.png",
+    folder: "FINTA", logo: "finta-logo.svg", preview: "prime-finta.webp",
     slides: [
       ["Баннеры мешали работе с дашбордом", "Рекламные врезки ломали сетку и занимали рабочую область. Пользователи жаловались на них в поддержку.", "before-1.png"],
       ["На первом экране осталась устаревшая карточка", "После отмены платы за отклонённые транзакции карточка Decline больше не приносила пользы. При этом пользователи открывали несколько карт подряд, чтобы найти нужную.", "before-2.png"],
@@ -18,7 +18,7 @@ const projects = [
   {
     id: "ai", name: "Антиплагиат", route: "antiplagiat", type: "web", tint: "#d9d5f1",
     story: "От отчёта к правкам", title: "Как встроить AI-ассистента в отчёт проверки",
-    folder: "antiplagiat", logo: "logo-antiplagiat-shield.svg", preview: "web-05-response-analysis.png",
+    folder: "antiplagiat", logo: "logo-antiplagiat-shield.svg", preview: "prime-banner-640.webp",
     slides: [
       ["После проверки неясно, что править", "Отчёт показывал процент оригинальности и маркеры ИИ. Чтобы понять, какие абзацы исправлять, пользователю приходилось разбирать отчёт самому.", "before-results-report.png"],
       ["У разных читателей разные вопросы", "Разобрал задачи студентов, преподавателей и редакторов. Студентам нужно найти фрагменты для правки, а преподавателям важно понять, откуда взялись совпадения.", "web-07-assistant-closed.png"],
@@ -30,7 +30,7 @@ const projects = [
   {
     id: "sber", name: "Sber CIB", route: "sber", type: "web", tint: "#d4e9d5",
     story: "Один базовый год", title: "Как сравнивать финансовые показатели за несколько лет",
-    folder: "sber", logo: "sber-logo.svg", preview: "sber-desktop.png",
+    folder: "sber", logo: "sber-logo.svg", preview: "prime-sber.webp",
     slides: [
       ["Таблица, в которой теряется базовый год", "Аналитики сопоставляли фактические и прогнозные показатели. При прокрутке таблицы базовый год уходил из поля зрения.", "sber-before.png"],
       ["Выделил две причины лишней прокрутки", "Шапка исчезала при движении по строкам. Пустые и ненужные срезы удлиняли таблицу, поэтому нужные цифры приходилось искать вручную.", "sber-before.png"],
@@ -42,7 +42,7 @@ const projects = [
   {
     id: "silk", name: "Silkway", route: "silkway", type: "mobile", tint: "#f4daca",
     story: "Профиль до и после", title: "Как превратить настройки в удобный профиль",
-    folder: "silkway", logo: "silkway-logo.svg", preview: "profile-after.png",
+    folder: "silkway", logo: "silkway-logo.svg", preview: "prime-silkway.webp",
     slides: [
       ["Профиль выглядел как список настроек", "Заказы, бонусы и статус аккаунта были разбросаны по меню. Нужно было упростить доступ к частым действиям и привести экраны к одним правилам.", "profile-before.png"],
       ["Аудит показал, где повторяется работа", "Кнопки, карточки и поля рисовали отдельно для разных экранов. При аудите с разработчиками выделил элементы, которые можно переиспользовать.", "task2/before-1.png"],
@@ -54,7 +54,7 @@ const projects = [
   {
     id: "taxi", name: "Taxi Troika", route: "taxi-troika", type: "mobile", tint: "#cdddEE",
     story: "Заказ глазами водителя", title: "Как упростить принятие заказа и сценарий поездки",
-    folder: "TROIKA", logo: "troika-logo.svg", preview: "after–5.png",
+    folder: "TROIKA", logo: "troika-logo.svg", preview: "prime-taxi-troika.webp",
     slides: [
       ["Водителю нужно быстро оценить заказ", "Карточка закрывала карту, а стоимость и адрес подачи находились в разных частях экрана. Кнопка принятия требовала точного нажатия.", "before-1.png"],
       ["Интервью объяснили, где водитель теряет время", "По аналитике сессий и интервью выяснил, что на оценку заявки уходило до 8–10 секунд. После принятия водитель мог путаться в статусах поездки.", "before-2.png"],
@@ -76,6 +76,7 @@ const categories = [
 
 const byId = id => document.getElementById(id);
 const caseHash = project => "#case-" + project.route;
+const casePath = project => "../" + project.route + "/";
 const prefix = "timur-portfolio.prime.v1.";
 const memory = new Map();
 function readValue(key) {
@@ -197,8 +198,8 @@ function renderStories() {
 }
 function renderFeed(filter) {
   byId("feed").innerHTML = projects.filter(project => filter === "all" || project.type === filter).map(project =>
-    `<a class="feed-card ${project.type}" href="${caseHash(project)}" aria-haspopup="dialog" style="--tint:${project.tint}">
-      <span class="feed-image"><img src="${caseImage(project, project.preview)}" alt="" loading="lazy"></span>
+    `<a class="feed-card ${project.type}" href="${casePath(project)}" data-case-view="${caseHash(project)}" aria-haspopup="dialog" style="--tint:${project.tint}">
+      <span class="feed-image"><img src="../assets/images/${project.preview}" alt="" loading="lazy" decoding="async"></span>
       <span class="feed-kind">${project.name} / ${project.type === "web" ? "Веб" : "Приложение"}</span><h3>${project.title}</h3></a>`
   ).join("");
 }
@@ -211,9 +212,16 @@ byId("filters").addEventListener("click", event => {
   renderFeed(chosen.dataset.filter);
 });
 function recordCase(event) {
-  if (!event.target.closest("a") || event.button > 1) return;
+  const link = event.target.closest("a[data-case-view]");
+  if (!link || event.button > 1) return;
   writeValue("case", true);
   updateProgress();
+  openCaseFromLink(event, link);
+}
+function openCaseFromLink(event, link) {
+  if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  location.hash = link.dataset.caseView;
 }
 byId("feed").addEventListener("click", recordCase);
 byId("feed").addEventListener("auxclick", recordCase);
@@ -286,7 +294,8 @@ function showFrame(projectNumber, index) {
   storyAvatar.src = "../assets/images/" + project.logo;
   if (newSeries && storyDialog.open) window.siteIconMotion?.pulse(storyAvatar);
   byId("slide-step").textContent = storySteps[index];
-  storyCaseLink.href = caseHash(project);
+  storyCaseLink.href = casePath(project);
+  storyCaseLink.dataset.caseView = caseHash(project);
   storyCaseLink.hidden = !lastFrame;
   byId("slide-count").textContent = (index + 1) + " / " + project.slides.length;
   byId("slide-title").textContent = title;
@@ -313,7 +322,10 @@ function completeStory(project) {
   writeValue("seen." + project.id, true);
   updateProgress();
 }
-storyCaseLink.addEventListener("click", () => completeStory(projects[projectIndex]));
+storyCaseLink.addEventListener("click", event => {
+  completeStory(projects[projectIndex]);
+  openCaseFromLink(event, storyCaseLink);
+});
 storyCaseLink.addEventListener("focus", syncStoryClock);
 storyCaseLink.addEventListener("blur", syncStoryClock);
 
@@ -413,7 +425,7 @@ storyDialog.addEventListener("close", () => {
 const caseDialog = byId("case-dialog");
 const caseFrame = byId("case-frame");
 const caseViews = new Map(projects.map(project => [
-  caseHash(project), { title: project.name, url: new URL("../" + project.route + "/?view=prime", location.href) }
+  caseHash(project), { title: project.name, url: new URL(casePath(project) + "?view=prime", location.href) }
 ]));
 caseViews.set("#prototype-antiplagiat", {
   title: "Прототип Антиплагиата",
