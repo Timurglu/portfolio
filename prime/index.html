@@ -89,8 +89,11 @@
       <div class="promo-grid">
         <aside id="project-ad" class="promo" data-prime-ad aria-labelledby="promo-title">
           <div class="promo-art" aria-hidden="true">
-            <img class="promo-desktop" src="../assets/cases/antiplagiat/web-05-response-analysis.png" alt="">
-            <img class="promo-phone" src="../assets/cases/antiplagiat/mobile-02-assistant-open.png" alt="">
+            <img class="promo-desktop" src="../assets/images/prime-banner-640.webp"
+              srcset="../assets/images/prime-banner-640.webp 640w, ../assets/images/prime-banner-1100.webp 1100w"
+              sizes="(max-width: 670px) 70vw, (max-width: 1280px) 45vw, 600px"
+              fetchpriority="high" alt="">
+            <img class="promo-phone" src="../assets/images/prime-banner-phone.webp" decoding="async" alt="">
           </div>
           <div class="promo-copy">
             <h2 id="promo-title">Антиплагиат<br> изнутри<span>.</span></h2>
@@ -101,7 +104,7 @@
 
         <aside class="about-card" aria-labelledby="about-title">
           <div class="about-header">
-            <img class="about-photo" src="../assets/images/profile-photo.jpg" alt="Тимур Глухов">
+            <img class="about-photo" src="../assets/images/prime-profile.webp" decoding="async" alt="Тимур Глухов">
             <div class="about-identity">
               <span class="about-role">Продуктовый дизайнер</span>
               <h2 id="about-title" class="about-name">Тимур Глухов</h2>
@@ -132,7 +135,15 @@
             <button type="button" aria-pressed="false" data-filter="mobile">Мобильные</button>
           </div>
           <div id="feed" class="feed"></div>
-          <noscript><p>Включите JavaScript, чтобы открыть кейсы и сторис.</p></noscript>
+          <noscript>
+            <ul>
+              <li><a href="../finta/">FINTA — редизайн финтех-дашборда</a></li>
+              <li><a href="../antiplagiat/">Антиплагиат — AI-ассистент в отчёте проверки</a></li>
+              <li><a href="../sber/">Sber CIB — дашборд финансовой аналитики</a></li>
+              <li><a href="../silkway/">Silkway — редизайн профиля и UI-кит</a></li>
+              <li><a href="../taxi-troika/">Taxi Troika — приложение для водителей такси</a></li>
+            </ul>
+          </noscript>
         </section>
 
         <aside class="widgets" aria-label="Возможности ПРАЙМ">
@@ -354,7 +365,7 @@
         <button type="button" class="assistant-teaser-close" id="assistant-teaser-close" aria-label="Скрыть подсказку">&times;</button>
       </div>
       <button type="button" class="assistant-avatar-btn" id="assistant-avatar-btn" aria-label="Открыть диалог с 3D-помощником Тимура" aria-haspopup="dialog">
-        <img class="assistant-avatar-img" src="../assets/images/avatar-3d-cutout.png" alt="3D-аватар Тимура">
+        <img class="assistant-avatar-img" src="../assets/images/prime-avatar.webp" decoding="async" alt="3D-аватар Тимура">
         <span class="assistant-online-badge" aria-label="Онлайн"></span>
       </button>
     </div>
@@ -363,7 +374,7 @@
       <div class="assistant-chat-header">
         <div class="assistant-header-profile">
           <div class="assistant-header-avatar">
-            <img src="../assets/images/avatar-3d-cutout.png" alt="Тимур 3D">
+            <img src="../assets/images/prime-avatar.webp" decoding="async" alt="Тимур 3D">
           </div>
           <div class="assistant-header-info">
             <span class="assistant-header-title">Тимур • 3D AI-помощник</span>
